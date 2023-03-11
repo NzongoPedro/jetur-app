@@ -1,0 +1,25 @@
+{
+  "noticias": [
+    {
+      "id": 1,
+      "titulo": "comemoração do 3º aniversário do jetur",
+      "data": "28 de outubro, 2022",
+      "texto": "Whitehaven Beach Whitsunday Island, Whitsunday Islands Whitehaven Beach Whitsunday Island, Whitsunday Islands",
+      "foto": "/images/noticias/1.jpg"
+    },
+    {
+      "id": 2,
+      "titulo": "Destaque do nosso evente 'Natal Premiado' ",
+      "data": "28 de outubro, 2022",
+      "texto": "Whitehaven Beach Whitsunday Island, Whitsunday Islands Whitehaven Beach Whitsunday Island, Whitsunday Islands",
+      "foto": "/images/noticias/2.jpeg"
+    },
+    {
+      "id": 3,
+      "titulo": "Afora o carro oficial dos platinados é jetur ",
+      "data": "28 de outubro, 2022",
+      "texto": "Whitehaven Beach Whitsunday Island, Whitsunday Islands Whitehaven Beach Whitsunday Island, Whitsunday Islands",
+      "foto": "/images/noticias/3.jpg"
+    }
+  ]
+}

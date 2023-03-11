@@ -1,30 +1,46 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <v-app>
+    <v-app-bar flat class="bg-primary">
+      <v-container class="fill-height">
+        <v-avatar class="me-10 ms-4" color="grey-darken-1" size="32"></v-avatar>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <router-link
+          v-for="link in links"
+          :key="link"
+          :to="`${link.to}`"
+          class="links-nav"
+        >
+          <v-btn variant="text">
+            {{ link.title }}
+          </v-btn>
+        </router-link>
+        <v-spacer></v-spacer>
+        <v-btn prepend-icon="mdi-car" variant="tonal" color="red">
+          Test Drive
+        </v-btn>
+      </v-container>
+    </v-app-bar>
+    <router-view></router-view>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+export default {
+  name: "App",
+  data: () => ({
+    links: [
+      { title: "MODELOS", to: "/" },
+      { title: "CAMPANHAS", to: "/campanhas" },
+      { title: "NOTÍCIAS", to: "/noticias" },
+      { title: "PÓS-VENDA", to: "/pos-venda" },
+    ],
+  }),
+};
+</script>
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+<style lang="css" scoped>
+.links-nav {
+  color: #fbfbfb !important;
 }
 </style>

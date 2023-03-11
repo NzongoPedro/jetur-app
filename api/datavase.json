@@ -1,0 +1,18 @@
+{
+  "automoveis": [
+    {
+      "id": 1,
+      "nome": "Jetur",
+      "modelo": "XX-9",
+      "cor": "",
+      "descricao": "lorem"
+    },
+    {
+      "id": 2,
+      "nome": "Jetur",
+      "modelo": "XX-9",
+      "cor": "",
+      "descricao": "lorem"
+    }
+  ]
+}

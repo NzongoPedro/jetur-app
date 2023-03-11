@@ -1,0 +1,28 @@
+{
+  "automoveis": [
+    {
+      "id": 1,
+      "nome": "jetur",
+      "modelo": "X90 plus",
+      "cor": "preta",
+      "slogan": "aproveite a vida e sua viagem",
+      "capa": "/images/jetur/x90Plus/capa-preta.png"
+    },
+    {
+      "id": 2,
+      "nome": "Jetur",
+      "modelo": "X70 plus",
+      "cor": "azul",
+      "slogan": "aproveite a vida e sua viagem",
+      "capa": "/images/jetur/x70Plus/capa-vermelho.png"
+    },
+    {
+      "id": 3,
+      "nome": "Jetur",
+      "modelo": "X70",
+      "cor": "azul",
+      "slogan": "aproveite a vida e sua viagem",
+      "capa": "/images/jetur/x70/capa-azul.png"
+    }
+  ]
+}
