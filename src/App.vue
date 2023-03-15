@@ -1,8 +1,9 @@
 <template>
   <v-app>
-    <v-app-bar flat class="bg-primary">
+    <v-app-bar flat class="bg-primary pa-2">
       <v-container class="fill-height">
-        <v-avatar class="me-10 ms-4" color="grey-darken-1" size="32"></v-avatar>
+        <v-img src="http://teste1.bcc.ao/gets/images/jetur/logo.png"></v-img>
+
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
         <router-link
@@ -11,29 +12,35 @@
           :to="`${link.to}`"
           class="links-nav"
         >
-          <v-btn variant="text">
-            {{ link.title }}
-          </v-btn>
+          {{ link.title }}
         </router-link>
         <v-spacer></v-spacer>
-        <v-btn prepend-icon="mdi-car" variant="tonal" color="red">
-          Test Drive
+        <v-btn variant="flat" prepend-icon="mdi-car" color="error">
+          TEST DRIVE
         </v-btn>
       </v-container>
     </v-app-bar>
     <router-view></router-view>
+    <the-footer></the-footer>
   </v-app>
 </template>
 
 <script>
+import TheFooter from "./layouts/TheFooter.vue";
+
 export default {
   name: "App",
+  components: {
+    TheFooter,
+  },
   data: () => ({
     links: [
-      { title: "MODELOS", to: "/" },
-      { title: "CAMPANHAS", to: "/campanhas" },
+      { title: "HOME", to: "/" },
+      { title: "MODELOS", to: "/jetur/modelos" },
+      { title: "GALERIAS", to: "/campanhas" },
       { title: "NOTÍCIAS", to: "/noticias" },
       { title: "PÓS-VENDA", to: "/pos-venda" },
+      { title: "SOBRE NÓS", to: "/pos-venda" },
     ],
   }),
 };
@@ -42,5 +49,15 @@ export default {
 <style lang="css" scoped>
 .links-nav {
   color: #fbfbfb !important;
+  background: none !important;
+  padding: 10px;
+  margin-right: 10px;
+  margin-top: -10px;
+  transition: 0.5s;
+}
+.links-nav:hover {
+  background: none !important;
+  border-bottom: 2px solid #f22 !important;
+  transition: 0.5s;
 }
 </style>

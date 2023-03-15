@@ -6,7 +6,41 @@
       "modelo": "X90 plus",
       "cor": "preta",
       "slogan": "aproveite a vida e sua viagem",
-      "capa": "/images/jetur/x90Plus/capa-preta.png"
+      "capa": "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/X90/capa.png",
+      "capa_2": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/KV.png",
+      "description": "ULTRA ESPAÇOSO, MOSTRANDO EXTREMO LUXO",
+      "visao_geral": [
+        {
+          "capa": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Color/JETOUR_X90_zilong_white_013.png"
+        }
+      ],
+      "cores": [
+        {
+          "nome": "preto",
+          "fundo": "bg-black",
+          "link": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Color/JETOUR_X90_zilong_black_013.png"
+        },
+        {
+          "nome": "cinzento",
+          "fundo": "bg-grey-lighten-2",
+          "link": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Color/JETOUR_X90_zilong_grey_013.png"
+        },
+        {
+          "nome": "violeta",
+          "fundo": "bg-pink-darken-4",
+          "link": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Color/JETOUR_X90_zilong_violet_013.png"
+        },
+        {
+          "nome": "braco",
+          "fundo": "bg-white",
+          "link": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Color/JETOUR_X90_zilong_white_013.png"
+        },
+        {
+          "nome": "azul",
+          "fundo": "bg-light-blue-darken-4",
+          "link": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Color/JETOUR_X90PLUS_008-PNG.png"
+        }
+      ]
     },
     {
       "id": 2,
@@ -14,7 +48,42 @@
       "modelo": "X70 plus",
       "cor": "azul",
       "slogan": "aproveite a vida e sua viagem",
-      "capa": "/images/jetur/x70Plus/capa-vermelho.png"
+      "capa": "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/X70Plus/PNG-2.png",
+      "capa_2": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/KV.png",
+      "description": "UMA EXPRESSÃO DE ELEGÂNCIA",
+      "visao_geral": [
+        {
+          "capa": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Color/white.png"
+        }
+      ],
+      "cores": [
+        {
+          "nome": "preto",
+          "fundo": "bg-black",
+          "link": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Color/black.png"
+        },
+        {
+          "nome": "vermelho",
+          "fundo": "bg-red-darken-4",
+          "link": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Color/red.png"
+        },
+
+        {
+          "nome": "roxo",
+          "fundo": "bg-pink-darken-2",
+          "link": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Color/roxo.png"
+        },
+        {
+          "nome": "braco",
+          "fundo": "bg-white",
+          "link": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Color/white.png"
+        },
+        {
+          "nome": "azul escuro",
+          "fundo": "bg-light-blue-darken-4",
+          "link": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Color/azul-escuro.png"
+        }
+      ]
     },
     {
       "id": 3,
@@ -22,7 +91,31 @@
       "modelo": "X70",
       "cor": "azul",
       "slogan": "aproveite a vida e sua viagem",
-      "capa": "/images/jetur/x70/capa-azul.png"
+      "capa": "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/X70/X70-2.png",
+      "capa_2": "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/X70/X70-2.png",
+      "description": "O Melhor e Prático carro para família angola",
+      "visao_geral": [
+        {
+          "capa": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Color/JETOUR_X90_zilong_white_013.png"
+        }
+      ],
+      "cores": [
+        {
+          "nome": "preto",
+          "fundo": "bg-black",
+          "link": "http://teste1.bcc.ao/gets/images/jetur/X70/Color/X70_240T_Black_Side-PNG.png"
+        },
+        {
+          "nome": "braco",
+          "fundo": "bg-white",
+          "link": "http://teste1.bcc.ao/gets/images/jetur/X70/Color/X70_240T_White_Side-PNG.png"
+        },
+        {
+          "nome": "azul",
+          "fundo": "bg-light-blue-darken-4",
+          "link": "http://teste1.bcc.ao/gets/images/jetur/X70/Color/X70_240T_Blue_Side-PNG.png"
+        }
+      ]
     }
   ]
 }

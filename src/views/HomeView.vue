@@ -13,7 +13,7 @@
         :src="item.src"
         cover
       >
-        <v-container
+        <!--   <v-container
           class="mt-10 slide animate__heartBeat"
           width="200"
           data-aos="fade-up"
@@ -21,7 +21,7 @@
         >
           <h1>{{ item.title }}</h1>
           <h5>{{ item.description }}</h5>
-        </v-container>
+        </v-container> -->
       </v-carousel-item>
     </v-carousel>
     <!-- HERO CARS -->
@@ -36,7 +36,16 @@
                 </h1>
                 <div>
                   <h5>{{ carro.slogan }}</h5>
-                  <p>ver mais</p>
+                  <p>
+                    <router-link
+                      :to="`/jetur/modelo/${carro.id}`"
+                      class="text-black"
+                      >ver mais</router-link
+                    >
+                    <span class="mx-4">
+                      <v-icon>mdi-arrow-right</v-icon>
+                    </span>
+                  </p>
                 </div>
               </div>
             </v-card-title>
@@ -45,7 +54,7 @@
                 :src="carro.capa"
                 class="img-car-cover animate__heartBeat"
                 cover
-                data-aos="fade-right"
+                data-aos="fade-left"
                 data-aos-offset="300"
                 data-aos-easing="ease-in-sine"
               >
@@ -59,19 +68,18 @@
             data-aos-anchor-placement="bottom-bottom"
           >
             <v-row justify="space-around">
-              <v-col>
-                <v-avatar
-                  v-for="(icone, car) in icon_car"
-                  :key="car"
-                  size="150"
+              <v-col v-for="(icone, car) in icon_car" :key="car">
+                <v-img
+                  width="15vh"
                   @click="infoCarById(icone.id)"
+                  height="30vh"
+                  class="img-icon-car"
+                  :src="icone.icon"
+                  :alt="icone.nome"
+                ></v-img>
+                <v-card-subtitle class="name-car">
+                  <h5>{{ icone.nome }}</h5></v-card-subtitle
                 >
-                  <v-img
-                    class="img-icon-car"
-                    :src="icone.icon"
-                    :alt="icone.nome"
-                  ></v-img>
-                </v-avatar>
               </v-col>
             </v-row>
           </v-card-actions>
@@ -94,6 +102,7 @@
             :key="i"
           >
             <v-card
+              elevation="0"
               class="mx-auto bg-grey-lighten-4"
               data-aos="fade-up"
               :data-aos-duration="`${1000 * noticia.id}`"
@@ -115,13 +124,16 @@
                 </router-link>
               </v-card-title>
 
-              <v-card-subtitle>
-                <v-icon>mdi-calendar-month</v-icon>
-                <span class="ml-3 text-uppercase">{{ noticia.data }}</span>
-              </v-card-subtitle>
-
-              <v-container grid-list-xs>
-                <v-card-text class="bg-grey-lighten-4 text-truncate">
+              <v-container class="noticia">
+                <v-card-subtitle>
+                  <v-icon>mdi-calendar-month</v-icon>
+                  <span class="ml-3 text-uppercase data-noticia">{{
+                    noticia.data
+                  }}</span>
+                </v-card-subtitle>
+                <v-card-text
+                  class="bg-grey-lighten-4 text-truncate noticia-texto"
+                >
                   <p>
                     {{ noticia.texto }}
                   </p>
@@ -129,13 +141,14 @@
                     {{ noticia.texto }}
                   </p>
                 </v-card-text>
+                <div class="mb-3 text-error mx-3">
+                  <span>
+                    <router-link class="text-red" :to="`/noticia/${noticia.id}`"
+                      >ver mais</router-link
+                    >
+                  </span>
+                </div>
               </v-container>
-
-              <v-card-actions>
-                <v-btn color="orange"> Share </v-btn>
-
-                <v-btn color="orange"> Explore </v-btn>
-              </v-card-actions>
             </v-card>
           </v-col>
         </v-row>
@@ -145,16 +158,12 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
 import { onMounted } from "vue";
 import AOS from "aos";
 import axios from "axios";
 
-export default defineComponent({
+export default {
   name: "HomeView",
-  /*  components: {
-    App,
-  }, */
   data() {
     return {
       dados_carro: "",
@@ -162,22 +171,22 @@ export default defineComponent({
       noticias: "",
       items: [
         {
-          src: "/images/slides/1.jpg",
+          src: "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/KV_pics/1.jpg",
           title: "X90 Plus",
           description: "ULTRA ESPAÇOSO, MOSTRANDO EXTREMO LUXO",
         },
         {
-          src: "/images/slides/2.jpg",
+          src: "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/KV_pics/2.jpg",
           title: "X70 Plus",
           description: "UMA EXPRESSÃO DE ELEGÂNCIA",
         },
         {
-          src: "/images/slides/3.jpg",
+          src: "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/KV_pics/3.jpg",
           title: "X70",
           description: "O Melhor e Prático carro para família angola   ",
         },
         /*  {
-          src: "/images/slides/4.png",
+          src: "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/KV_pics/4.png",
           title: "",
           description: "",
         }, */
@@ -185,17 +194,17 @@ export default defineComponent({
 
       icon_car: [
         {
-          icon: "/images/jetur/x90Plus/icon-preto.png",
+          icon: "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/X90/JETOUR_X90_zilong_black_066.png",
           nome: "X90 PLUS",
           id: 1,
         },
         {
-          icon: "/images/jetur/x70Plus/icon-vermelho.png",
+          icon: "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/X70Plus/PNG.png",
           nome: "X70 PLUS",
           id: 2,
         },
         {
-          icon: "/images/jetur/x70/icon-azul.png",
+          icon: "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/X70/X70_.png",
           nome: "X70",
           id: 3,
         },
@@ -235,7 +244,7 @@ export default defineComponent({
     this.infoCar();
     this.getNoticias();
   },
-});
+};
 onMounted(() => {
   AOS.init();
 });
@@ -251,7 +260,8 @@ onMounted(() => {
   color: #1a1a1a;
   font-size: 50px;
   text-transform: uppercase;
-  font-family: "Shojumaru", cursive;
+  font-family: "Acto Medium";
+  margin-top: 20px;
 }
 .slide h5 {
   color: #fafafa;
@@ -287,11 +297,10 @@ onMounted(() => {
 
 .img-car-cover {
   max-width: 100%;
-  width: 50vh !important;
+  width: 95% !important;
   object-fit: cover;
   object-position: center;
   margin: auto;
-  transform: scale(1.5);
 }
 
 .acoes {
@@ -301,16 +310,24 @@ onMounted(() => {
 }
 .acoes .img-icon-car {
   transition: 0.5s;
-  border-radius: 0 !important;
   background: transparent;
+  max-width: 100%;
+  height: 120px !important;
+  object-fit: cover;
+  object-position: center;
+  margin: auto;
 }
 .acoes .img-icon-car:hover {
   transform: scale(1.8);
   transition: 0.5s;
-  object-fit: cover;
-  object-position: top;
-  border: 2px solid #444;
   cursor: pointer;
+}
+.acoes .name-car {
+  color: #000 !important;
+  font-weight: bold !important;
+  margin: auto;
+  font-size: 20px;
+  text-align: center;
 }
 
 .link-noticia {
@@ -318,5 +335,17 @@ onMounted(() => {
   text-transform: capitalize;
   font-family: "Nunito", sans-serif;
   font-weight: bold;
+}
+.data-noticia {
+  font-size: 10px !important;
+  margin-bottom: 0;
+  margin-top: -10px !important;
+}
+
+.noticia-texto {
+  margin-top: -2px;
+}
+.noticia {
+  margin-top: -20px !important;
 }
 </style>
