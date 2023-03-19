@@ -53,8 +53,11 @@
               <div class="text-center centered">
                 <h5>
                   <router-link to="/sobre" class="text-error"
-                    >ver mais</router-link
-                  >
+                    >ver mais
+                    <span class="mx-4">
+                      <v-icon>mdi-arrow-right</v-icon>
+                    </span>
+                  </router-link>
                 </h5>
               </div>
             </v-card-text>

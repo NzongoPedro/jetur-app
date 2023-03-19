@@ -2,7 +2,7 @@
   "automoveis": [
     {
       "id": 1,
-      "nome": "jetur",
+      "nome": "jETOUR",
       "modelo": "X90 plus",
       "nome_catalogo": "X90_Plus_Impressão_A4_Papel_Couchê.pdf",
       "link_catalogo": "http://teste1.bcc.ao/gets/catalogos/X90_Plus_Impressão_A4_Papel_Couchê.pdf",
@@ -85,7 +85,7 @@
     },
     {
       "id": 2,
-      "nome": "Jetur",
+      "nome": "JETOUR",
       "modelo": "X70 plus",
       "nome_catalogo": "X70_Plus_Impressão_A4_Papel_Couchê.pdf",
       "link_catalogo": "http://teste1.bcc.ao/gets/catalogos/X70_Plus_Impressão_A4_Papel_Couchê.pdf",
@@ -169,7 +169,7 @@
     },
     {
       "id": 3,
-      "nome": "Jetur",
+      "nome": "JETOUR",
       "modelo": "X70",
       "nome_catalogo": "X70_Impressão_A4_Papel_Couchê.pdf",
       "link_catalogo": "http://teste1.bcc.ao/gets/catalogos/X70_Impressão_A4_Papel_Couchê.pdf",
