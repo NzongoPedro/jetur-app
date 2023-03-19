@@ -1,6 +1,6 @@
 <template>
   <v-footer class="footer" data-aos="fade-up">
-    <div class="w-100 align-center div">
+    <div class="w-100 align-center div d-flex">
       <v-container class="">
         <v-row no-gutters>
           <v-col>
@@ -130,7 +130,7 @@ export default {
 </script>
 <style scoped>
 .footer {
-  background: #1a1a1a;
+  background: url("http://teste1.bcc.ao/gets/images/jetur/Other_pages/01.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -150,12 +150,7 @@ export default {
 }
 
 .div {
-  background: rgb(26, 26, 26);
-  background: linear-gradient(
-    90deg,
-    rgba(26, 26, 26, 0.1) 10%,
-    rgba(0, 0, 0, 0.5) 50%,
-    rgba(27, 27, 27, 0.3) 90%
-  );
+  background: rgba(26, 26, 26, 0.8);
+  width: 100%;
 }
 </style>

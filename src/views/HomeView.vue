@@ -276,7 +276,7 @@ export default {
   },
 
   mounted() {
-    document.title = "Jetur";
+    document.title = "Jetour";
     this.infoCar();
     this.getNoticias();
   },
