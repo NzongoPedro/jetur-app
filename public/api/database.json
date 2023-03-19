@@ -4,6 +4,7 @@
       "id": 1,
       "nome": "jetur",
       "modelo": "X90 plus",
+      "nome_catalogo": "X90_Plus_Impressão_A4_Papel_Couchê.pdf",
       "link_catalogo": "http://teste1.bcc.ao/gets/catalogos/X90_Plus_Impressão_A4_Papel_Couchê.pdf",
       "cor": "preta",
       "slogan": "aproveite a vida e sua viagem",
@@ -12,6 +13,7 @@
       "description": "ULTRA ESPAÇOSO, MOSTRANDO EXTREMO LUXO",
       "visao_geral": [
         {
+          "foto_info": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Interior/electronic-gear-shifter.png",
           "capa": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Color/JETOUR_X90_zilong_white_013.png"
         }
       ],
@@ -69,12 +71,23 @@
           "conteudo": "A câmera panorâmica 360° auxilia o motorista com uma visão panorâmica e o Parking Assist, bem como ao estacionar e manobrar. A câmera torna visível a área imediatamente ao redor do veículo, tanto do ponto de vista aéreo quanto abaixo da linha da janela.",
           "foto": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Technology/360 degree panoramic parking.png"
         }
+      ],
+      "info": [
+        {
+          "t1": " 2850 milímeros",
+          "t2": "254HP",
+          "t3": "2.0T+7DCT",
+          "desc1": "Distância entre os eixos",
+          "desc2": "Potência máxima",
+          "desc3": "Motor"
+        }
       ]
     },
     {
       "id": 2,
       "nome": "Jetur",
       "modelo": "X70 plus",
+      "nome_catalogo": "X70_Plus_Impressão_A4_Papel_Couchê.pdf",
       "link_catalogo": "http://teste1.bcc.ao/gets/catalogos/X70_Plus_Impressão_A4_Papel_Couchê.pdf",
       "cor": "azul",
       "slogan": "aproveite a vida e sua viagem",
@@ -83,6 +96,7 @@
       "description": "UMA EXPRESSÃO DE ELEGÂNCIA",
       "visao_geral": [
         {
+          "foto_info": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Interior/1.jpg",
           "capa": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Color/white.png"
         }
       ],
@@ -141,12 +155,23 @@
           "conteudo": "Lorem impsum dolor sit amet Lorem impsum dolor sit amet Lorem impsum dolor sit amet Lorem impsum dolor sit amet",
           "foto": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Tech/LDWS.png"
         }
+      ],
+      "info": [
+        {
+          "t1": " 2745 milímeros",
+          "t2": "290HP",
+          "t3": "2.6T+7DCT",
+          "desc1": "Distância entre os eixos",
+          "desc2": "Potência máxima",
+          "desc3": "Motor"
+        }
       ]
     },
     {
       "id": 3,
       "nome": "Jetur",
       "modelo": "X70",
+      "nome_catalogo": "X70_Impressão_A4_Papel_Couchê.pdf",
       "link_catalogo": "http://teste1.bcc.ao/gets/catalogos/X70_Impressão_A4_Papel_Couchê.pdf",
       "cor": "azul",
       "slogan": "aproveite a vida e sua viagem",
@@ -155,6 +180,7 @@
       "description": "O Melhor e Prático carro para família angola",
       "visao_geral": [
         {
+          "foto_info": "http://teste1.bcc.ao/gets/images/jetur/X70/Interior/Cockpit Inteligente.jpg",
           "capa": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Color/JETOUR_X90_zilong_white_013.png"
         }
       ],
@@ -201,6 +227,16 @@
           "titulo": "Alto fator de segurança EPB+AUTOHOLD",
           "conteudo": "função AUTOHOLD inteligente permite que a roda traseira seja freada automaticamente quando o veículo está parado em um sinal vermelho ou estacionado em uma subida ou descida. O motorista não terá que pisar no freio o tempo todo para manter o carro parado, mesmo que a transmissão automática esteja no modo D. A função Auto Hold será ativada assim que o botão “AUTHOLD” for pressionado, e uma pisada suave no acelerador liberará o freio. Este recurso inteligente dissipa completamente a preocupação de escorregar no início da subida",
           "foto": "http://teste1.bcc.ao/gets/images/jetur/X70/Tech/1jpg"
+        }
+      ],
+      "info": [
+        {
+          "t1": "2745 milímeros",
+          "t2": "156HP",
+          "t3": "1.5T + BAT",
+          "desc1": "Distância entre os eixos",
+          "desc2": "Potência máxima",
+          "desc3": "Motor"
         }
       ]
     }

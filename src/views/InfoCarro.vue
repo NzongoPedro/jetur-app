@@ -43,7 +43,7 @@
         </v-container>
       </div>
       <v-card-text>
-        <v-container grid-list-xs>
+        <div grid-list-xs>
           <v-window v-model="tab">
             <div v-for="(detalhe, i) in dados_carro" :key="i">
               <v-window-item v-for="num in 6" :key="num" :value="`tab-${num}`">
@@ -69,6 +69,93 @@
                         cor.nome
                       }}</v-tooltip>
                     </v-avatar>
+                    <div class="my-4 w-100">
+                      <v-img
+                        cover
+                        sizes="250"
+                        width="100%"
+                        height="80vh"
+                        v-for="(info, i) in dados_carro[0].visao_geral"
+                        :key="i"
+                        :src="info.foto_info"
+                      >
+                        <div class="info-car">
+                          <v-container grid-list-xs>
+                            <v-row>
+                              <v-col
+                                v-for="(info, i) in dados_carro[0].info"
+                                :key="i"
+                              >
+                                <v-card class="bg-transparent" elevation="0">
+                                  <v-card-media src="src" height="200px">
+                                  </v-card-media>
+                                  <v-card-title primary-title class="b">
+                                    <div class="content-info">
+                                      <h3 class="headline mb-0">
+                                        {{ info.t1 }}
+                                      </h3>
+                                      <div>{{ info.desc1 }}</div>
+                                    </div>
+                                  </v-card-title>
+                                  <v-divider
+                                    :thickness="5"
+                                    class="border-opacity-100"
+                                    color="white"
+                                    vertical
+                                  ></v-divider>
+                                </v-card>
+                              </v-col>
+                              <v-col
+                                v-for="(info, i) in dados_carro[0].info"
+                                :key="i"
+                              >
+                                <v-card class="bg-transparent" elevation="0">
+                                  <v-card-media src="src" height="200px">
+                                  </v-card-media>
+                                  <v-card-title primary-title class="b">
+                                    <div class="content-info">
+                                      <h3 class="headline mb-0">
+                                        {{ info.t2 }}
+                                      </h3>
+                                      <div>{{ info.desc2 }}</div>
+                                    </div>
+                                  </v-card-title>
+                                  <v-divider
+                                    :thickness="5"
+                                    class="border-opacity-100"
+                                    color="white"
+                                    vertical
+                                  ></v-divider>
+                                </v-card>
+                              </v-col>
+                              <v-col
+                                v-for="(info, i) in dados_carro[0].info"
+                                :key="i"
+                              >
+                                <v-card class="bg-transparent" elevation="0">
+                                  <v-card-media src="src" height="200px">
+                                  </v-card-media>
+                                  <v-card-title primary-title>
+                                    <div class="content-info">
+                                      <h3 class="headline mb-0">
+                                        {{ info.t3 }}
+                                      </h3>
+                                      <div>{{ info.desc3 }}</div>
+                                    </div>
+                                  </v-card-title>
+                                  <v-divider
+                                    :thickness="5"
+                                    class="border-opacity-100"
+                                    color="white"
+                                    vertical
+                                  ></v-divider>
+                                </v-card>
+                              </v-col>
+                            </v-row>
+                          </v-container>
+                        </div>
+                      </v-img>
+                    </div>
                   </div>
                 </div>
                 <!-- Desempenho -->
@@ -253,7 +340,7 @@
               </v-window-item>
             </div>
           </v-window>
-        </v-container>
+        </div>
       </v-card-text>
     </v-card>
   </div>
@@ -387,5 +474,33 @@ onMounted(() => {
 }
 .titulo {
   font-size: 30px !important;
+}
+
+.info-car {
+  margin-top: 65vh;
+  background: none;
+  background: rgba(0, 0, 0, 0.4);
+}
+.content-info h3 {
+  color: #fbfbfb;
+  font-size: 30px;
+  font-family: "Acto Medium";
+  text-align: left !important;
+  font-weight: bold;
+}
+.content-info div {
+  color: #ddd;
+  font-family: "Acto Medium";
+  margin-top: 4px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left !important;
+}
+
+.b:last-child {
+  border: none !important;
+}
+.b {
+  border-right: 2px solid #fbfbfb;
 }
 </style>
