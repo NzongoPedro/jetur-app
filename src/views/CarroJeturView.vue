@@ -34,6 +34,17 @@
               <v-card-text>
                 <p class="p-5 text-uppercase">{{ carro.description }}</p>
               </v-card-text>
+              <div class="center text-center centered mb-5">
+                <a :href="carro.link_catalogo" :download="carro.nome_catalogo">
+                  <v-btn
+                    variant="flat"
+                    color="error"
+                    prepend-icon="mdi-file-pdf-box"
+                  >
+                    BAIXAR CATALÓGO
+                  </v-btn>
+                </a>
+              </div>
             </v-card>
           </v-col>
         </v-row>

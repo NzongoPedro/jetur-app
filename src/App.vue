@@ -2,8 +2,14 @@
   <v-app>
     <v-app-bar flat class="bg-primary pa-2">
       <v-container class="fill-height">
-        <v-img src="http://teste1.bcc.ao/gets/images/jetur/logo.png"></v-img>
-
+        <router-link to="/">
+          <v-img
+            class="my-0"
+            width="20vh"
+            src="http://teste1.bcc.ao/gets/images/jetur/logo.png"
+          >
+          </v-img>
+        </router-link>
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
         <router-link
@@ -35,12 +41,12 @@ export default {
   },
   data: () => ({
     links: [
-      { title: "HOME", to: "/" },
       { title: "MODELOS", to: "/jetur/modelos" },
-      { title: "GALERIAS", to: "/campanhas" },
-      { title: "NOTÍCIAS", to: "/noticias" },
+      { title: "GALERIA", to: "/galeria" },
+      { title: "NOTÍCIA", to: "/noticias" },
       { title: "PÓS-VENDA", to: "/pos-venda" },
-      { title: "SOBRE NÓS", to: "/pos-venda" },
+      { title: "SOBRE NÓS", to: "/sobre" },
+      { title: "CATÁLOGOS", to: "/catalogos" },
     ],
   }),
 };
@@ -50,7 +56,7 @@ export default {
 .links-nav {
   color: #fbfbfb !important;
   background: none !important;
-  padding: 10px;
+  padding: 8px;
   margin-right: 10px;
   margin-top: -10px;
   transition: 0.5s;

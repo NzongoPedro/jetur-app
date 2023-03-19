@@ -25,6 +25,43 @@
       </v-carousel-item>
     </v-carousel>
     <!-- HERO CARS -->
+    <v-container>
+      <v-row>
+        <v-col>
+          <v-card
+            class="text-center align-center centered my-15 mb-15 bg-transparent bg-none"
+            elevation="0"
+            data-aos="fade-up"
+          >
+            <v-card-title primary-title>
+              <div>
+                <h3 class="headline mb-0">SOBRE JETOUR</h3>
+              </div>
+            </v-card-title>
+            <v-card-text>
+              <h3 class="my-2">
+                A Jetour faz parte de um grupo automóvel globalizado baseado na
+                China com mais de 20 anos de formidável experiência em
+                engenharia automóvel. A associação orgulha-se de possuir uma
+                série de marcas próprias e de joint-venture com as suas filiais
+                independentes centradas em marcas particulares de segmentos de
+                veículos no mercado, tais como a JETOUR. O grupo deixou a sua
+                marca no negócio em termos de evolução do aspecto tecnológico
+                das suas marcas.
+              </h3>
+              <br />
+              <div class="text-center centered">
+                <h5>
+                  <router-link to="/sobre" class="text-error"
+                    >ver mais</router-link
+                  >
+                </h5>
+              </div>
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
     <section class="container bg-grey-lighten-4">
       <v-container grid-list-xs>
         <v-card class="card-car" elevation="0">
@@ -117,7 +154,7 @@
 
               <v-card-title class="pt-4 mt-3 my-3 text--grey-darken-4">
                 <router-link
-                  :to="`/noticias/${noticia.id}`"
+                  :to="`/noticia/${noticia.id}`"
                   class="text--grey-darken-4 link-noticia"
                 >
                   {{ noticia.titulo }}
@@ -191,7 +228,6 @@ export default {
           description: "",
         }, */
       ],
-
       icon_car: [
         {
           icon: "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/X90/JETOUR_X90_zilong_black_066.png",

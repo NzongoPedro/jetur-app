@@ -23,7 +23,7 @@
                   >{{ item.nome }}</router-link
                 >
               </v-card-text>
-              <v-card-text class="my-2">
+              <v-card-text class="my-0">
                 <v-card-title>
                   <h3 class="text-white">Contanctos</h3>
                 </v-card-title>
@@ -60,7 +60,7 @@
                 </p>
               </v-card-text>
 
-              <v-card-title class="my-0">
+              <v-card-title class="my-6">
                 <h5 class="text-white">BENGUELA</h5>
               </v-card-title>
               <v-card-text>
@@ -76,21 +76,21 @@
                 <h5 class="text-white">Modelos</h5>
               </v-card-title>
               <v-card-text>
-                <router-link to="/modelo-jetur/" class="link-rapido"
+                <router-link to="/jetur/modelo/1" class="link-rapido"
                   >X70</router-link
                 >
-                <router-link to="/modelo-jetur/" class="link-rapido"
+                <router-link to="/jetur/modelo/2" class="link-rapido"
                   >X70 Plus</router-link
                 >
-                <router-link to="/modelo-jetur/" class="link-rapido"
+                <router-link to="/jetur/modelo/3" class="link-rapido"
                   >X90 Plus</router-link
                 >
               </v-card-text>
-              <v-card-title class="my-0">
-                <h5 class="text-white">LUBANGO</h5>
+              <v-card-title class="my-15">
+                <h5 class="text-white my-0">LUBANGO</h5>
               </v-card-title>
               <v-card-text>
-                <p class="text-white">
+                <p class="text-white my-0">
                   Zona industrial, ex oficina Ruber Hudson-Ford
                 </p>
               </v-card-text>
@@ -120,8 +120,7 @@ export default {
   data: () => ({
     items: [
       { nome: "Home", link: "/" },
-      { nome: "Modelos", link: "/modelos" },
-      { nome: "Campanhas", link: "/campanhas" },
+      { nome: "Modelos", link: "/jetur/modelos" },
       { nome: "Notícias", link: "/noticias" },
       { nome: "Pós venda", link: "/pos-venda" },
       { nome: "TesteDrive", link: "/test-drive" },
