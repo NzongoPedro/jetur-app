@@ -61,7 +61,9 @@
         </div>
         <v-card-title primary-title>
           <div class="pa-5 ma-5">
-            <h1 class="headline mb-0 centered text-center"><b>SOBRE A CHINANGOL</b></h1>
+            <h1 class="headline mb-0 centered text-center">
+              <b>SOBRE A CHINANGOL</b>
+            </h1>
           </div>
         </v-card-title>
         <v-card-text>
@@ -87,6 +89,49 @@
           </p>
         </v-card-text>
       </v-card>
+      <v-row>
+        <v-col cols="5">
+          <v-img
+            size="500"
+            src="ícone-de-missao.jpg"
+          ></v-img>
+        </v-col>
+        <v-col lg="6" cols="6">
+          <v-card data-aos="fade-up" elevation="0">
+            <v-card-title primary-title>
+              <div class="pa-5 ma-5">
+                <h1 class="headline mb-0">
+                  <b> NOSSA MISSÃO</b>
+                </h1>
+              </div>
+            </v-card-title>
+
+            <v-card-text>
+              <p class="pa-5 text-justify texto-sobre">
+                <b
+                  >Originário de África, Chinangol tem vindo a operar com
+                  sucesso em África há quase 30 anos e tem-se dedicado ao
+                  comércio e investimento em mais de 20 países africanos. A LDA,
+                  uma das maiores empresas privadas financiadas pela Chinangol,
+                  tem uma vasta experiência operacional e de investimento e
+                  desempenho de projectos no continente africano, especializada
+                  na importação e exportação de materiais de construção,
+                  máquinas e equipamentos e veículos, transporte marítimo,
+                  desenvolvimento imobiliário e construção, e investimento e
+                  desenvolvimento mineiro. Durante muitos anos o grupo tem sido
+                  o importador número um de cimento em Angola (vendendo a sua
+                  própria marca de cimento África No.1), o importador de
+                  veículos pesados e o maior transportador de carga seca a
+                  granel na rota China-Sudoeste de África; desenvolveu e
+                  construiu as moradias mobiladas mais sofisticadas e mobilou
+                  apartamentos altos em Luanda, a capital de Angola, bem como
+                  armazéns de cimento, lojas 4S e alojamentos para empregados.
+                </b>
+              </p>
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>
@@ -96,16 +141,11 @@ import { onMounted } from "vue";
 import AOS from "aos";
 
 export default {
-  name: "NoticiaView",
+  name: "SobreView",
   data() {
-    return {
-      noticias: "",
-      idNoticia: "",
-      titulos: "",
-    };
+    return {};
   },
 
-  
   mounted() {
     document.title = "Sobre a JETOUR";
   },

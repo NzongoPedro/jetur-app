@@ -16,16 +16,15 @@
           <v-form>
             <v-container>
               <div primary-title class="mb-10">
-                <h1 class="text-uppercase mb-5">MARCAÇÃO DE SERVIÇOS</h1>
-                <h4>Por favor preencha o formulário a baixo</h4>
+                <h1 class="text-uppercase mb-5">MARCAR TESTE DRIVE</h1>
               </div>
               <v-row>
                 <v-col cols="12" sm="12">
                   <div class="mt-5">
-                    <h3 class="mb-5 text-uppercase">1.1 Escolha um serviço</h3>
+                    <h3 class="mb-5 text-uppercase">1.1 Escolha um modelo</h3>
                   </div>
                   <v-text-field
-                    label="SELECIONE UM SERVIÇO"
+                    label="SELECIONE UM MODELO"
                     variant="outlined"
                     dense
                     lg
@@ -39,13 +38,25 @@
                     </h3>
                   </div>
                   <v-text-field
-                    label="PRIMEIRO E ÙLTIMO NOME"
+                    label="NOME"
                     variant="outlined"
                     dense
                     lg
                     elevatio="0"
                   ></v-text-field>
                 </v-col>
+
+                <v-col cols="12" sm="12">
+                  <v-text-field
+                    label="NÚMERO DE TELEFONE"
+                    variant="outlined"
+                    dense
+                    lg
+                    elevatio="0"
+                    prepend-inner-icon="mdi-phone"
+                  ></v-text-field>
+                </v-col>
+
                 <v-col cols="12" sm="12">
                   <v-text-field
                     label="E-MAIL"
@@ -57,56 +68,12 @@
                 </v-col>
                 <v-col cols="12" sm="12">
                   <v-text-field
-                    label="NÚMERO DE TELEFONE"
-                    variant="outlined"
-                    dense
-                    lg
-                    elevatio="0"
-                    prepend-inner-icon="mdi-phone"
-                  ></v-text-field>
-                </v-col>
-                <v-col cols="12" sm="12">
-                  <v-text-field
-                    label="CIDADE"
+                    label="DATA DA MARCAÇAO"
                     variant="outlined"
                     dense
                     lg
                     elevatio="0"
                   ></v-text-field>
-                </v-col>
-
-                <v-col cols="6" sm="6">
-                  <v-text-field
-                    label="DATA PREFERENCIAL"
-                    variant="outlined"
-                    dense
-                    lg
-                    elevatio="0"
-                  ></v-text-field>
-                  <!-- <div>
-                    <VueDatePicker
-                      lg
-                      color="black"
-                      v-model="date"
-                    ></VueDatePicker>
-                  </div> -->
-                </v-col>
-
-                <v-col cols="6" sm="6">
-                  <v-text-field
-                    label="MATRÍCULA"
-                    variant="outlined"
-                    dense
-                    lg
-                    elevatio="0"
-                  ></v-text-field>
-                  <!-- <div>
-                    <VueDatePicker
-                      lg
-                      color="black"
-                      v-model="date"
-                    ></VueDatePicker>
-                  </div> -->
                 </v-col>
               </v-row>
             </v-container>
@@ -140,7 +107,7 @@ import AOS from "aos";
 
 export default {
   /*  components: { VueDatePicker }, */
-  name: "PosVendaView",
+  name: "TestDriveView",
   data() {
     return {
       date: "2018-03-02",
@@ -152,7 +119,7 @@ export default {
   },
 
   mounted() {
-    document.title = "Serviços de manutenção Acessórios";
+    document.title = "Fazer test drive";
   },
 };
 

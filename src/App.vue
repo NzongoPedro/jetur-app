@@ -21,9 +21,16 @@
           {{ link.title }}
         </router-link>
         <v-spacer></v-spacer>
-        <v-btn variant="flat" prepend-icon="mdi-car" color="error">
-          TEST DRIVE
-        </v-btn>
+        <router-link to="/fazer-test-driver">
+          <v-btn
+            variant="flat"
+            rounded="0"
+            prepend-icon="mdi-car"
+            color="error"
+          >
+            TEST DRIVE
+          </v-btn>
+        </router-link>
       </v-container>
     </v-app-bar>
     <router-view></router-view>
