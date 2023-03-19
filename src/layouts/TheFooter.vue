@@ -133,6 +133,9 @@ export default {
   background: url("http://teste1.bcc.ao/gets/images/jetur/Other_pages/01.png");
   background-repeat: no-repeat;
   background-position: center center;
+  background-attachment: fixed;
+  top: 0;
+  left: 0;
   background-size: cover;
 }
 
@@ -141,6 +144,7 @@ export default {
   display: block;
   line-height: 25px !important;
   font-size: 18px;
+  width: 100%;
   font-weight: normal !important;
 }
 
