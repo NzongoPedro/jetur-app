@@ -56,6 +56,10 @@ export default {
       ],
     };
   },
+
+  mounted() {
+    document.title = "Galerias de Foto";
+  },
 };
 </script>
 

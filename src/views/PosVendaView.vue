@@ -5,7 +5,12 @@
     <br /><br /><br />
     <v-container grid-list-lg>
       <v-row>
-        <v-col cols="5"> </v-col>
+        <v-col cols="5">
+          <v-img
+            size="500"
+            src="http://teste1.bcc.ao/gets/images/jetur/Noticias/teste.jpg"
+          ></v-img>
+        </v-col>
         <div></div>
         <v-col cols="7">
           <v-form>
@@ -111,7 +116,12 @@
             </div>
 
             <div class="my-8 fill-height ml-4">
-              <v-btn size="large" variant="flat" color="error" rounded="0" type="submit"
+              <v-btn
+                size="large"
+                variant="flat"
+                color="error"
+                rounded="0"
+                type="submit"
                 >SUBMETER</v-btn
               >
             </div>
@@ -142,6 +152,10 @@ export default {
 
   methods: {
     allowedDates: (val) => parseInt(val.split("-")[2], 10) % 2 === 0,
+  },
+
+  mounted() {
+    document.title = "Serviços de manutenção Acessórios";
   },
 };
 

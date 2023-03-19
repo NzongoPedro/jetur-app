@@ -5,7 +5,7 @@
         <router-link to="/">
           <v-img
             class="my-0"
-            width="20vh"
+            width="22vh"
             src="http://teste1.bcc.ao/gets/images/jetur/logo.png"
           >
           </v-img>

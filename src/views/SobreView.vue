@@ -104,6 +104,11 @@ export default {
       titulos: "",
     };
   },
+
+  
+  mounted() {
+    document.title = "Sobre a JETOUR";
+  },
 };
 
 onMounted(() => {
