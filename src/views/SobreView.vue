@@ -90,13 +90,16 @@
         </v-card-text>
       </v-card>
       <v-row>
-        <v-col cols="5">
+        <v-col cols="4">
+          <div class="my-15 d-flex justify-center align-content-center align-center">
+
+          </div>
           <v-img
             size="500"
-            src="ícone-de-missao.jpg"
+            src="http://teste1.bcc.ao/gets/images/icone-de-missao.jpg"
           ></v-img>
         </v-col>
-        <v-col lg="6" cols="6">
+        <v-col lg="8" cols="8">
           <v-card data-aos="fade-up" elevation="0">
             <v-card-title primary-title>
               <div class="pa-5 ma-5">
@@ -108,24 +111,16 @@
 
             <v-card-text>
               <p class="pa-5 text-justify texto-sobre">
-                <b
-                  >Originário de África, Chinangol tem vindo a operar com
-                  sucesso em África há quase 30 anos e tem-se dedicado ao
-                  comércio e investimento em mais de 20 países africanos. A LDA,
-                  uma das maiores empresas privadas financiadas pela Chinangol,
-                  tem uma vasta experiência operacional e de investimento e
-                  desempenho de projectos no continente africano, especializada
-                  na importação e exportação de materiais de construção,
-                  máquinas e equipamentos e veículos, transporte marítimo,
-                  desenvolvimento imobiliário e construção, e investimento e
-                  desenvolvimento mineiro. Durante muitos anos o grupo tem sido
-                  o importador número um de cimento em Angola (vendendo a sua
-                  própria marca de cimento África No.1), o importador de
-                  veículos pesados e o maior transportador de carga seca a
-                  granel na rota China-Sudoeste de África; desenvolveu e
-                  construiu as moradias mobiladas mais sofisticadas e mobilou
-                  apartamentos altos em Luanda, a capital de Angola, bem como
-                  armazéns de cimento, lojas 4S e alojamentos para empregados.
+                <b>
+                  Ao entrar no mercado angolano em 2019,a Jetour tinha apenas
+                  uma missão - fornecer aos consumidores angolanos a gama mais
+                  completa de SUVS económicos luxuosos e de alto desempenho.
+                  Apos 3anos，mais de 4.000 veículos vendidos e varias vidas
+                  impactadas positivamente. A Jetour continua profundamente
+                  comprometida com nossa missão inicial. O que vislumbramos para
+                  o futuro do Jetour e estar profundamente enraizado na cultura
+                  angolanas vislumbramos um mundo onde todos possam desfrutar da
+                  bela experiência de dirigiram modelo Jetour.
                 </b>
               </p>
             </v-card-text>
