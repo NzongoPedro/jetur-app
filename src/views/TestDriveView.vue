@@ -77,18 +77,32 @@
                 </v-col>
               </v-row>
             </v-container>
-            <div class="">
-              <v-checkbox label="Conconrdo com Políticas e Privacidade">
+            <div class="teste">
+              <v-checkbox
+                color="red"
+                v-model="checkPermtion"
+                label="Conconrdo com Políticas e Privacidade"
+              >
               </v-checkbox>
             </div>
-
             <div class="my-8 fill-height ml-4">
               <v-btn
+                v-if="!checkPermtion"
+                size="large"
+                variant="flat"
+                color="black"
+                rounded="0"
+                type="button"
+                disabled="fase"
+                >SUBMETER</v-btn
+              >
+              <v-btn
+                v-else
                 size="large"
                 variant="flat"
                 color="error"
                 rounded="0"
-                type="submit"
+                type="button"
                 >SUBMETER</v-btn
               >
             </div>
@@ -111,6 +125,7 @@ export default {
   data() {
     return {
       date: "2018-03-02",
+      checkPermtion: false,
     };
   },
 

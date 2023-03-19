@@ -23,7 +23,7 @@
                   >{{ item.nome }}</router-link
                 >
               </v-card-text>
-              <v-card-text class="my-0">
+              <v-card-text class="my-2">
                 <v-card-title>
                   <h3 class="text-white">Contanctos</h3>
                 </v-card-title>
@@ -42,6 +42,7 @@
                   markting@jetur.com
                 </span>
               </v-card-text>
+            
             </v-card>
           </v-col>
           <v-col>
@@ -64,7 +65,7 @@
                 <h5 class="text-white">BENGUELA</h5>
               </v-card-title>
               <v-card-text>
-                <p class="text-white">
+                <p class="text-white mt-n7">
                   Zona comercial Do 28, Rua Marecal Carmona.
                 </p>
               </v-card-text>
@@ -86,11 +87,11 @@
                   >X90 Plus</router-link
                 >
               </v-card-text>
-              <v-card-title class="my-15">
-                <h5 class="text-white my-0">LUBANGO</h5>
-              </v-card-title>
               <v-card-text>
-                <p class="text-white my-0">
+                <v-card-title class="my-0">
+                  <h5 class="text-white my-13">LUBANGO</h5>
+                </v-card-title>
+                <p class="text-white my-0 mt-n14 ml-4">
                   Zona industrial, ex oficina Ruber Hudson-Ford
                 </p>
               </v-card-text>
@@ -123,7 +124,7 @@ export default {
       { nome: "Modelos", link: "/jetur/modelos" },
       { nome: "Notícias", link: "/noticias" },
       { nome: "Pós venda", link: "/pos-venda" },
-      { nome: "TesteDrive", link: "/test-drive" },
+      { nome: "TesteDrive", link: "/fazer-test-driver" },
     ],
   }),
 };

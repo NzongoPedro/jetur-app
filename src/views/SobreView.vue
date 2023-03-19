@@ -91,9 +91,9 @@
       </v-card>
       <v-row>
         <v-col cols="4">
-          <div class="my-15 d-flex justify-center align-content-center align-center">
-
-          </div>
+          <div
+            class="my-15 d-flex justify-center align-content-center align-center"
+          ></div>
           <v-img
             size="500"
             src="http://teste1.bcc.ao/gets/images/icone-de-missao.jpg"
@@ -101,15 +101,14 @@
         </v-col>
         <v-col lg="8" cols="8">
           <v-card data-aos="fade-up" elevation="0">
-            <v-card-title primary-title>
-              <div class="pa-5 ma-5">
-                <h1 class="headline mb-0">
-                  <b> NOSSA MISSÃO</b>
-                </h1>
-              </div>
-            </v-card-title>
-
             <v-card-text>
+              <v-card-title primary-title>
+                <div class="my-5">
+                  <h1 class="headline mb-0">
+                    <b> NOSSA MISSÃO</b>
+                  </h1>
+                </div>
+              </v-card-title>
               <p class="pa-5 text-justify texto-sobre">
                 <b>
                   Ao entrar no mercado angolano em 2019,a Jetour tinha apenas
