@@ -51,7 +51,7 @@ const routes = [
   },
   {
     path: '/fazer-test-driver',
-    name: 'posvenda',
+    name: 'testedrive',
     component: () => import('../views/TestDriveView.vue')
   }
 ]
