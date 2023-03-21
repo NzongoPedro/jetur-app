@@ -25,46 +25,6 @@
       </v-carousel-item>
     </v-carousel>
     <!-- HERO CARS -->
-    <v-container>
-      <v-row>
-        <v-col>
-          <v-card
-            class="text-center align-center centered my-15 mb-15 bg-transparent bg-none"
-            elevation="0"
-            data-aos="fade-up"
-          >
-            <v-card-title primary-title>
-              <div>
-                <h3 class="headline mb-0">SOBRE JETOUR</h3>
-              </div>
-            </v-card-title>
-            <v-card-text>
-              <h3 class="my-2">
-                A Jetour faz parte de um grupo automóvel globalizado baseado na
-                China com mais de 20 anos de formidável experiência em
-                engenharia automóvel. A associação orgulha-se de possuir uma
-                série de marcas próprias e de joint-venture com as suas filiais
-                independentes centradas em marcas particulares de segmentos de
-                veículos no mercado, tais como a JETOUR. O grupo deixou a sua
-                marca no negócio em termos de evolução do aspecto tecnológico
-                das suas marcas.
-              </h3>
-              <br />
-              <div class="text-center centered">
-                <h5>
-                  <router-link to="/sobre" class="text-error"
-                    >ver mais
-                    <span class="mx-4">
-                      <v-icon>mdi-arrow-right</v-icon>
-                    </span>
-                  </router-link>
-                </h5>
-              </div>
-            </v-card-text>
-          </v-card>
-        </v-col>
-      </v-row>
-    </v-container>
     <section class="container bg-grey-lighten-4">
       <v-container grid-list-xs>
         <v-card class="card-car" elevation="0">
@@ -110,15 +70,15 @@
             <v-row justify="space-around">
               <v-col v-for="(icone, car) in icon_car" :key="car">
                 <v-img
-                  width="15vh"
+                  width="18vh"
                   @click="infoCarById(icone.id)"
-                  height="30vh"
+                  height="70vh"
                   class="img-icon-car"
                   :src="icone.icon"
                   :alt="icone.nome"
                 ></v-img>
-                <v-card-subtitle class="name-car">
-                  <h5>{{ icone.nome }}</h5></v-card-subtitle
+                <v-card-title class="name-car">
+                  <h5 class="text-black">{{ icone.nome }}</h5></v-card-title
                 >
               </v-col>
             </v-row>
@@ -143,13 +103,13 @@
           >
             <v-card
               elevation="0"
-              class="mx-auto bg-grey-lighten-4"
+              class="mx-auto bg-grey-lighten-4 h-100"
               data-aos="fade-up"
               :data-aos-duration="`${1000 * noticia.id}`"
             >
               <v-img
                 class="align-end text-white"
-                height="200"
+                height="55vh"
                 :src="noticia.foto"
                 cover
               >
@@ -201,9 +161,10 @@
 import { onMounted } from "vue";
 import AOS from "aos";
 import axios from "axios";
-
+//import TheNavbarVue from "@/layouts/TheNavbar.vue";
 export default {
   name: "HomeView",
+  components: {},
   data() {
     return {
       dados_carro: "",
@@ -279,7 +240,7 @@ export default {
   },
 
   mounted() {
-    document.title = "Jetour";
+    document.title = "Jetour Angola";
     this.infoCar();
     this.getNoticias();
   },
@@ -336,7 +297,7 @@ onMounted(() => {
 
 .img-car-cover {
   max-width: 100%;
-  width: 95% !important;
+  width: 60% !important;
   object-fit: cover;
   object-position: center;
   margin: auto;
@@ -345,13 +306,13 @@ onMounted(() => {
 .acoes {
   width: 500px !important;
   margin: auto;
-  margin-top: 50px;
+  margin-top: -150px;
 }
 .acoes .img-icon-car {
   transition: 0.5s;
   background: transparent;
   max-width: 100%;
-  height: 120px !important;
+  height: 350px !important;
   object-fit: cover;
   object-position: center;
   margin: auto;
@@ -365,8 +326,12 @@ onMounted(() => {
   color: #000 !important;
   font-weight: bold !important;
   margin: auto;
-  font-size: 20px;
+  margin-top: -120px;
   text-align: center;
+}
+.acoes .name-car h5 {
+  font-weight: bold !important;
+  font-size: 22px;
 }
 
 .link-noticia {

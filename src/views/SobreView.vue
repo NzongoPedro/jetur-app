@@ -4,10 +4,12 @@
     <v-container grid-list-xs class="my-15">
       <v-card elevation="0" class="mb-10 text-uppercase" data-aos="fade-up">
         <div class="my-10 m-auto centered align-center text-center">
-          <v-img
-            class="m-auto logo"
-            src="http://teste1.bcc.ao/gets/images/jetur-logo-preto.png"
-          ></v-img>
+          <router-link to="/">
+            <v-img
+              class="m-auto logo"
+              src="http://teste1.bcc.ao/gets/images/jetur-logo-preto.png"
+            ></v-img>
+          </router-link>
         </div>
         <v-card-title primary-title>
           <div
@@ -92,7 +94,7 @@
       <v-row>
         <v-col cols="4">
           <div
-            class="my-15 d-flex justify-center align-content-center align-center"
+            class="my-12 d-flex justify-center align-content-center align-center"
           ></div>
           <v-img
             size="500"
