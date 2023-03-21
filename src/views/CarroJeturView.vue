@@ -104,7 +104,7 @@ export default {
   },
 
   mounted() {
-    document.title = "Modelos Jetur";
+    document.title = "Modelos Jetour";
 
     this.infoCar();
   },

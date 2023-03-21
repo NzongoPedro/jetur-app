@@ -23,9 +23,9 @@
                   >{{ item.nome }}</router-link
                 >
               </v-card-text>
-              <v-card-text class="my-2">
+              <v-card-text class="my-0">
                 <v-card-title>
-                  <h3 class="text-white">Contanctos</h3>
+                  <h5 class="text-white">Contactos</h5>
                 </v-card-title>
                 <span class="text-white">
                   <v-icon class="mr-3">mdi-phone</v-icon>
@@ -42,7 +42,6 @@
                   markting@jetur.com
                 </span>
               </v-card-text>
-            
             </v-card>
           </v-col>
           <v-col>
@@ -77,16 +76,15 @@
                 <h5 class="text-white">Modelos</h5>
               </v-card-title>
               <v-card-text>
-                <router-link to="/jetur/modelo/1" class="link-rapido"
-                  >X70</router-link
-                >
-                <router-link to="/jetur/modelo/2" class="link-rapido"
-                  >X70 Plus</router-link
-                >
-                <router-link to="/jetur/modelo/3" class="link-rapido"
-                  >X90 Plus</router-link
+                <a
+                  v-for="(modelo, i) in modelos"
+                  :key="i"
+                  :href="modelo.link"
+                  class="link-rapido"
+                  >{{ modelo.nome }}</a
                 >
               </v-card-text>
+
               <v-card-text>
                 <v-card-title class="my-0">
                   <h5 class="text-white my-13">LUBANGO</h5>
@@ -124,20 +122,25 @@ export default {
       { nome: "Modelos", link: "/jetur/modelos" },
       { nome: "Notícias", link: "/noticias" },
       { nome: "Pós venda", link: "/pos-venda" },
+      { nome: "Sobre nós", link: "/sobre" },
       { nome: "TesteDrive", link: "/fazer-test-driver" },
+    ],
+    modelos: [
+      { nome: "X90 Plus", link: "/jetur/modelo/1" },
+      { nome: "X70 Plus", link: "/jetur/modelo/2" },
+      { nome: "X70", link: "/jetur/modelo/3" },
     ],
   }),
 };
 </script>
 <style scoped>
 .footer {
-  background: url("http://teste1.bcc.ao/gets/images/jetur/Other_pages/01.png");
+  background: #1b1b1b;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-  top: 0;
-  left: 0;
   background-size: cover;
+  width: 100%;
 }
 
 .link-rapido {
@@ -155,7 +158,7 @@ export default {
 }
 
 .div {
-  background: rgba(26, 26, 26, 0.8);
   width: 100%;
+  background: #1b1b1b;
 }
 </style>

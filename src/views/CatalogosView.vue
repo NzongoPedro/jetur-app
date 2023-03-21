@@ -73,11 +73,6 @@ export default {
       ],
     };
   },
-  mounted() {
-    document.title = "Catálogos de Modelos da Jetour";
-    this.infoCar();
-    this.getNoticias();
-  },
 };
 
 onMounted(() => {

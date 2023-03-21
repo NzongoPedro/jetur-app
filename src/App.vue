@@ -12,6 +12,34 @@
         </router-link>
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
+        <div class="mt-n3">
+          <v-menu open-on-hover>
+            <template v-slot:activator="{ props }">
+              <router-link
+                :key="$route.params.atr"
+                to="#!"
+                class="links-nav"
+                v-bind="props"
+              >
+                MODELOS
+              </router-link>
+            </template>
+
+            <v-list>
+              <v-list-item v-for="(item, index) in items" :key="index">
+                <v-list-item-title>
+                  <router-link
+                    :key="$route.params.atr"
+                    :to="item.link"
+                    class="links-nav-submenu"
+                  >
+                    {{ item.title }}
+                  </router-link>
+                </v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+        </div>
         <router-link
           v-for="link in links"
           :key="link"
@@ -48,20 +76,49 @@ export default {
   },
   data: () => ({
     links: [
-      { title: "MODELOS", to: "/jetur/modelos" },
-      { title: "GALERIA", to: "/galeria" },
+      /*    { title: "SOBRE NÓS", to: "/sobre" }, */
+      /* { title: "MODELOS", to: "/jetur/modelos" }, */
+      /*    { title: "CATÁLOGOS", to: "/catalogos" }, */
       { title: "NOTÍCIA", to: "/noticias" },
+      /*   { title: "GALERIA", to: "/galeria" }, */
       { title: "PÓS-VENDA", to: "/pos-venda" },
-      { title: "SOBRE NÓS", to: "/sobre" },
-      { title: "CATÁLOGOS", to: "/catalogos" },
+    ],
+    items: [
+      { title: "X90 PLUS", link: "/jetur/modelo/1" },
+      { title: "X70 PLUS", link: "/jetur/modelo/2" },
+      { title: "X70", link: "/jetur/modelo/3" },
+      { title: "Catálogos", link: "/catalogos" },
     ],
   }),
+
+  methods: {
+    atualizarComponente() {
+      // lógica para atualizar o componente com base no novo valor de atr
+    },
+  },
+  beforeRouteUpdate(to, from, next) {
+    this.atr = to.params.atr;
+    this.atualizarComponente();
+    next();
+  },
+
+  mounted() {
+    document.title = "Jetour Angola";
+  },
 };
 </script>
 
 <style lang="css" scoped>
 .links-nav {
   color: #fbfbfb !important;
+  background: none !important;
+  padding: 8px;
+  margin-right: 10px;
+  margin-top: -10px;
+  transition: 0.5s;
+}
+.links-nav-submenu {
+  color: #1a1a1a !important;
   background: none !important;
   padding: 8px;
   margin-right: 10px;

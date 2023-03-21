@@ -11,10 +11,15 @@
         :src="carro.capa_2"
       >
         <v-container grid-list-xs class="my-10">
-          <div class="my-10 slide" justify-start>
+          <div class="my-10 slide" v-if="carro.id === 1" justify-start>
             <h1 class="text-white">{{ carro.nome }} {{ carro.modelo }}</h1>
             <!--     <h5>{{ carro.visao_geral[0].capa }}</h5> -->
             <h5>{{ carro.description }}</h5>
+          </div>
+          <div class="my-10 slide" v-else justify-start>
+            <h1 class="text-black">{{ carro.nome }} {{ carro.modelo }}</h1>
+            <!--     <h5>{{ carro.visao_geral[0].capa }}</h5> -->
+            <h5 class="text-black">{{ carro.description }}</h5>
           </div>
         </v-container>
       </v-img>
@@ -350,9 +355,10 @@
 import { onMounted } from "vue";
 import AOS from "aos";
 import axios from "axios";
-
+//import TheNavbarVue from "@/layouts/TheNavbar.vue";
 export default {
   name: "InfoCarro",
+  components: {},
   data() {
     return {
       cores: [
@@ -387,6 +393,7 @@ export default {
       link_cor: "",
       cor_carro: "",
       tab: null,
+      atr: null,
     };
   },
 
@@ -416,6 +423,17 @@ export default {
       this.link_cor =
         this.dados_carro[0].cores[(this.idcar = this.$route.params.id - 1)];
     },
+
+    atualizarComponente() {
+      this.infoCar();
+      this.getColorCar();
+    },
+  },
+
+  beforeRouteUpdate(to, from, next) {
+    this.atr = to.params.atr;
+    this.atualizarComponente();
+    next();
   },
 
   mounted() {
