@@ -8,14 +8,14 @@
         </div>
         <v-row>
           <v-col
-            cols="4"
-            lg="4"
+            cols="12"
+            lg="12"
             sm="12"
             v-for="(carro, i) in dados_carro"
             :key="i"
             data-aos="fade-right"
           >
-            <v-card class="h-100 hover">
+            <v-card class="h-100 hover bg-transparent bg-none" elevation="0">
               <v-card-media height="300px" class="p-5">
                 <v-img sizes="150" :src="carro.capa" class="my-3 p-5"></v-img>
               </v-card-media>

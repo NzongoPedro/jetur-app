@@ -4,6 +4,7 @@
       "id": 1,
       "nome": "jETOUR",
       "modelo": "X90 plus",
+      "logo_carro":"http://teste1.bcc.ao/gets/images/jetur/logos_carros/x90plus.png",
       "nome_catalogo": "X90_Plus_Impressão_A4_Papel_Couchê.pdf",
       "link_catalogo": "http://teste1.bcc.ao/gets/catalogos/X90_Plus_Impressão_A4_Papel_Couchê.pdf",
       "cor": "preta",
@@ -86,6 +87,7 @@
     {
       "id": 2,
       "nome": "JETOUR",
+      "logo_carro":"http://teste1.bcc.ao/gets/images/jetur/logos_carros/x70plus.png",
       "modelo": "X70 plus",
       "nome_catalogo": "X70_Plus_Impressão_A4_Papel_Couchê.pdf",
       "link_catalogo": "http://teste1.bcc.ao/gets/catalogos/X70_Plus_Impressão_A4_Papel_Couchê.pdf",
@@ -169,6 +171,7 @@
     },
     {
       "id": 3,
+      "logo_carro":"http://teste1.bcc.ao/gets/images/jetur/logos_carros/x70.png",
       "nome": "JETOUR",
       "modelo": "X70",
       "nome_catalogo": "X70_Impressão_A4_Papel_Couchê.pdf",
