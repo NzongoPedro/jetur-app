@@ -19,27 +19,26 @@
                   v-for="(item, i) in items"
                   :key="i"
                   :to="item.link"
-                  class="link-rapido"
+                  class="link-rapido text-uppercase"
                   >{{ item.nome }}</router-link
                 >
               </v-card-text>
-              <v-card-text class="my-0">
+              <v-card-text class="my-6">
                 <v-card-title>
-                  <h5 class="text-white">Contactos</h5>
+                  <h5 class="text-white text-uppercase">
+                    Mais informações
+                  </h5>
                 </v-card-title>
-                <span class="text-white">
+                <span class="text-white text-footer">
                   <v-icon class="mr-3">mdi-phone</v-icon>
-                  949 836 673
+                  949 836 673 - 999 345 678
                 </span>
                 <br />
-                <span class="text-white">
-                  <v-icon class="mr-3">mdi-email</v-icon>
+                <span class="text-white text-footer">
+                  <v-icon class="mr-3 icon-footer">mdi-email</v-icon>
                   administrativo@jeturangola.com
-                </span>
-                <br />
-                <span class="text-white">
-                  <v-icon class="mr-3">mdi-email</v-icon>
-                  markting@jetur.com
+                  <span class="ml-11 my-15 mt-n16 p-0 i">markting@jetur.com</span>
+                  <br />
                 </span>
               </v-card-text>
             </v-card>
@@ -47,15 +46,15 @@
           <v-col>
             <v-card class="bg-transparent bg-none" elevation="0">
               <v-card-title class="my-0">
-                <h5 class="text-white">Luanda</h5>
+                <h5 class="text-white text-uppercase">Luanda</h5>
               </v-card-title>
               <v-card-text>
-                <p class="text-white text-justify">
+                <p class="text-white text-footer">
                   Viana, Av Fidel de Castro Km 26 Kilamba, Rua imperial Santana,
                   Zona NE Kilamba, Kilamba Kiaxi.
-                  <br />
+                  <br /><br />
                   Chamavo Rua Alameda Manuel Vandunem Maculusso, Nº 428.
-                  <br />
+                  <br /><br />
                   Benfica Rua direita do Patriota.
                 </p>
               </v-card-text>
@@ -73,7 +72,7 @@
           <v-col>
             <v-card class="bg-transparent bg-none" elevation="0">
               <v-card-title class="my-0">
-                <h5 class="text-white">Modelos</h5>
+                <h5 class="text-white text-uppercase">Modelos</h5>
               </v-card-title>
               <v-card-text>
                 <a
@@ -84,10 +83,10 @@
                   >{{ modelo.nome }}</a
                 >
               </v-card-text>
-
+              <br />
               <v-card-text>
                 <v-card-title class="my-0">
-                  <h5 class="text-white my-13">LUBANGO</h5>
+                  <h5 class="text-white my-15">LUBANGO</h5>
                 </v-card-title>
                 <p class="text-white my-0 mt-n14 ml-4">
                   Zona industrial, ex oficina Ruber Hudson-Ford
@@ -98,7 +97,7 @@
           <v-col>
             <v-card class="bg-transparent bg-none" elevation="0">
               <v-card-title class="my-0">
-                <h5 class="text-white">Pós venda</h5>
+                <h5 class="text-white text-uppercase">Pós venda</h5>
               </v-card-title>
               <v-card-text>
                 <p class="text-white">
@@ -115,7 +114,9 @@
   </v-footer>
 </template>
 <script>
+//import MenuFlutuanteVue from "../components/MenuFlutuante.vue";
 export default {
+  components: {},
   data: () => ({
     items: [
       { nome: "Home", link: "/" },
@@ -149,7 +150,7 @@ export default {
   line-height: 25px !important;
   font-size: 18px;
   width: 100%;
-  font-weight: normal !important;
+  font-weight: bold !important;
 }
 
 .head-title {
@@ -160,5 +161,15 @@ export default {
 .div {
   width: 100%;
   background: #1b1b1b;
+}
+
+.text-footer {
+  font-weight: normal !important;
+  font-family: "Nunito" !important;
+}
+
+
+.i{
+  margin-top: -20px !important;
 }
 </style>

@@ -25,10 +25,20 @@
       </v-img>
     </div>
     <!-- tabs -->
-    <v-card rounded="0" bg-color="primary" class="p-10">
-      <div bg-color="primary" class="w-100 bg-primary">
+    <v-card rounded="0" bg-color="primary" class="p-0">
+      <div bg-color="primary" class="w-100 bg-primary p-0">
         <v-container grid-list-xs>
           <v-tabs v-model="tab" bg-color="primary" class="p-12">
+            <div class="bordr-0 mr-10 mt-3">
+              <v-img
+                width="20vh"
+                v-for="(logo, i) in dados_carro"
+                :src="logo.logo_carro"
+                :key="i"
+              >
+              </v-img>
+            </div>
+
             <v-tab value="tab-1" color="error">
               <span class="text-white"> VISÃO GERAL</span>
             </v-tab>
@@ -54,19 +64,24 @@
               <v-window-item v-for="num in 6" :key="num" :value="`tab-${num}`">
                 <!-- visão gera -->
                 <div v-if="num == 1">
-                  <div v-if="!cor_carro">
-                    <v-img :src="`${detalhe.visao_geral[0].capa}`"> </v-img>
+                  <div v-if="!cor_carro" class="mb-10">
+                    <v-img
+                      class="carro-capa"
+                      :src="`${detalhe.visao_geral[0].capa}`"
+                    >
+                    </v-img>
                   </div>
-                  <div v-else>
-                    <v-img :src="cor_carro" class="capa-colorida"> </v-img>
+                  <div v-else class="mb-10">
+                    <v-img :src="cor_carro" class="capa-colorida carro-capa">
+                    </v-img>
                   </div>
-                  <div class="my-5 text-center centered m-auto">
+                  <div class="my-n10 mt-n15 text-center centered m-auto mb-10">
                     <v-avatar
                       v-for="(cor, i) in dados_carro[0].cores"
                       :key="i"
                       size="60"
                       elevation="5"
-                      class="cores"
+                      class="cores mt-n15"
                       :class="`${cor.fundo} p-1  mx-2`"
                       @click="getColorCar(cor.link)"
                     >
@@ -162,12 +177,182 @@
                       </v-img>
                     </div>
                   </div>
+                  <br /><br />
+                  <v-container grid-list-xs>
+                    <h1
+                      class="m-auto centered text-center mb-10 text-blue-grey-lighten-2 mt-14 my-14"
+                    >
+                      DESEMPENHO
+                    </h1>
+
+                    <v-row>
+                      <v-col
+                        v-for="(desepenho, i) in dados_carro[0].desepenho"
+                        :key="i"
+                      >
+                        <v-card elevation="0">
+                          <v-card-title primary-title>
+                            <div>
+                              <h3 class="headline mb-0 titulo">
+                                {{ desepenho.titulo }}
+                              </h3>
+                            </div>
+                          </v-card-title>
+                          <v-card-text class="my-5">
+                            <div class="desepenho-desc">
+                              {{ desepenho.descricao }}
+                            </div>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                      <v-col
+                        cols="6"
+                        v-for="(desepenho, i) in dados_carro[0].desepenho"
+                        :key="i"
+                      >
+                        <v-card elevation="0">
+                          <v-img
+                            :src="desepenho.foto_depenho"
+                            max-height="100%"
+                          ></v-img>
+                        </v-card>
+                      </v-col>
+                    </v-row>
+                  </v-container>
+                  <v-container grid-list-xs>
+                    <h1
+                      class="m-auto centered text-center mb-10 text-blue-grey-lighten-2 mt-14 my-14"
+                    >
+                      EXTERIOR
+                      <br /><br /><br /><br /><br />
+                    </h1>
+                    <v-row>
+                      <v-col
+                        cols="6"
+                        v-for="(exterior, i) in dados_carro[0].exterior"
+                        :key="i"
+                      >
+                        <v-card>
+                          <v-img :src="exterior.foto" max-height="100%"></v-img>
+                        </v-card>
+                      </v-col>
+                      <v-col
+                        v-for="(exterior, i) in dados_carro[0].exterior"
+                        :key="i"
+                      >
+                        <v-card elevation="0">
+                          <v-card-titlre primary-title>
+                            <div>
+                              <h3 class="headline mb-0 titulo">
+                                {{ exterior.titulo }}
+                              </h3>
+                            </div>
+                          </v-card-titlre>
+                          <v-card-text class="my-5">
+                            <div class="desepenho-desc">
+                              {{ exterior.conteudo }}
+                            </div>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                    </v-row>
+                  </v-container>
+                  <v-container grid-list-xs>
+                    <h1
+                      class="m-auto centered text-center mb-10 text-blue-grey-lighten-2 mt-14 my-14"
+                    >
+                      INTERIOR
+                      <br /><br /><br /><br /><br />
+                    </h1>
+                    <v-row>
+                      <v-col
+                        v-for="(interior, i) in dados_carro[0].interior"
+                        :key="i"
+                      >
+                        <v-card elevation="0">
+                          <v-card-titlre primary-title>
+                            <div>
+                              <h3 class="headline mb-0 titulo">
+                                {{ interior.titulo }}
+                              </h3>
+                            </div>
+                          </v-card-titlre>
+                          <v-card-text class="my-5">
+                            <div class="desepenho-desc">
+                              {{ interior.conteudo }}
+                            </div>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                      <v-col
+                        cols="6"
+                        v-for="(interior, i) in dados_carro[0].interior"
+                        :key="i"
+                      >
+                        <v-card>
+                          <v-img :src="interior.foto" max-height="100%"></v-img>
+                        </v-card>
+                      </v-col>
+                    </v-row>
+                  </v-container>
+                  <v-container grid-list-xs>
+                    <h1
+                      class="m-auto centered text-center mb-10 text-blue-grey-lighten-2 mt-14 my-14"
+                    >
+                      TECNOLOGIA
+                      <br /><br /><br /><br /><br />
+                    </h1>
+                    <v-row>
+                      <v-col
+                        cols="6"
+                        v-for="(tecnologia, i) in dados_carro[0].tecnologia"
+                        :key="i"
+                      >
+                        <v-card>
+                          <v-img
+                            :src="tecnologia.foto"
+                            max-height="100%"
+                          ></v-img>
+                        </v-card>
+                      </v-col>
+                      <v-col
+                        v-for="(tecnologia, i) in dados_carro[0].tecnologia"
+                        :key="i"
+                      >
+                        <v-card elevation="0">
+                          <v-card-titlre primary-title>
+                            <div>
+                              <h3 class="headline mb-0 titulo">
+                                {{ tecnologia.titulo }}
+                              </h3>
+                            </div>
+                          </v-card-titlre>
+                          <v-card-text class="my-5">
+                            <div class="desepenho-desc">
+                              {{ tecnologia.conteudo }}
+                            </div>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                    </v-row>
+                  </v-container>
+                  <!-- Catalogo -->
+                  <!--   <div class="center text-center centered mb-5">
+                 <a :href=""></a>
+                  <v-btn
+                    variant="flat"
+                    color="error"
+                    prepend-icon="mdi-file-pdf-box"
+                  >
+                    BAIXAR CATALÓGO
+                  </v-btn>
+                </div> -->
                 </div>
                 <!-- Desempenho -->
                 <div v-else-if="num == 2">
                   <v-container grid-list-xs>
                     <h1
-                      class="m-auto centered text-center mb-10 text-blue-grey-lighten-2"
+                      class="m-auto centered text-center mb-10 text-blue-grey-lighten-2 mt-14 my-14"
                     >
                       DESEMPENHO
                     </h1>
@@ -211,7 +396,7 @@
                 <div v-else-if="num == 3">
                   <v-container grid-list-xs>
                     <h1
-                      class="m-auto centered text-center mb-10 text-blue-grey-lighten-2"
+                      class="m-auto centered text-center mb-10 text-blue-grey-lighten-2 mt-14 my-14"
                     >
                       EXTERIOR
                       <br /><br /><br /><br /><br />
@@ -252,7 +437,7 @@
                 <div v-else-if="num == 4">
                   <v-container grid-list-xs>
                     <h1
-                      class="m-auto centered text-center mb-10 text-blue-grey-lighten-2"
+                      class="m-auto centered text-center mb-10 text-blue-grey-lighten-2 mt-14 my-14"
                     >
                       INTERIOR
                       <br /><br /><br /><br /><br />
@@ -293,7 +478,7 @@
                 <div v-else-if="num == 5">
                   <v-container grid-list-xs>
                     <h1
-                      class="m-auto centered text-center mb-10 text-blue-grey-lighten-2"
+                      class="m-auto centered text-center mb-10 text-blue-grey-lighten-2 mt-14 my-14"
                     >
                       TECNOLOGIA
                       <br /><br /><br /><br /><br />
@@ -333,21 +518,21 @@
                     </v-row>
                   </v-container>
                 </div>
-                <!--  <div class="center text-center centered mb-5">
-                  <v-btn
-                    variant="flat"
-                    color="error"
-                    prepend-icon="mdi-file-pdf-box"
-                  >
-                    BAIXAR CATALÓGO
-                  </v-btn>
-                </div> -->
               </v-window-item>
             </div>
           </v-window>
         </div>
       </v-card-text>
     </v-card>
+    <!-- Galeria -->
+    <!--   <v-carousel hide-delimiters>
+      <v-carousel-item
+        v-for="(slide, i) in dados_carro"
+        :key="i"
+        :src="item.src"
+        cover
+      ></v-carousel-item>
+    </v-carousel> -->
   </div>
 </template>
 
@@ -361,6 +546,7 @@ export default {
   components: {},
   data() {
     return {
+      logo_carro: null,
       cores: [
         {
           nome: "preto",
@@ -479,6 +665,9 @@ onMounted(() => {
 
 .cores {
   border: 3px solid #ddd;
+  border-radius: 0 !important;
+  width: 70px !important;
+  height: 40px !important;
 }
 .cores:hover {
   cursor: pointer;
@@ -491,6 +680,7 @@ onMounted(() => {
   text-align: justify;
 }
 .titulo {
+  margin-top: 2vh;
   font-size: 30px !important;
 }
 
@@ -520,5 +710,14 @@ onMounted(() => {
 }
 .b {
   border-right: 2px solid #fbfbfb;
+}
+.carro-capa {
+  margin-bottom: 2vh;
+  max-width: 100% !important;
+  margin: auto !important;
+  width: 60% !important;
+}
+img {
+  border-radius: 0 !important;
 }
 </style>

@@ -31,20 +31,20 @@
           <div v-for="(carro, car) in dados_carro" :key="car">
             <v-card-title primary-title>
               <div>
-                <h1 class="headline mb-0 text-uppercase animate__flash">
+                <h2 class="headline mb-0 text-uppercase animate__flash mt-15">
                   {{ carro.nome }} {{ carro.modelo }}
-                </h1>
+                </h2>
                 <div>
                   <h5>{{ carro.slogan }}</h5>
                   <p>
                     <router-link
                       :to="`/jetur/modelo/${carro.id}`"
-                      class="text-black"
-                      >ver mais</router-link
-                    >
-                    <span class="mx-4">
-                      <v-icon>mdi-arrow-right</v-icon>
-                    </span>
+                      class="text-black traco"
+                      >ver mais
+                      <span class="mx-4">
+                        <v-icon>mdi-arrow-right</v-icon>
+                      </span>
+                    </router-link>
                   </p>
                 </div>
               </div>
@@ -61,19 +61,14 @@
               </v-img>
             </v-card-text>
           </div>
-          <v-card-actions
-            class="acoes"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-anchor-placement="bottom-bottom"
-          >
+          <v-card-actions class="acoes">
             <v-row justify="space-around">
               <v-col v-for="(icone, car) in icon_car" :key="car">
                 <v-img
                   width="18vh"
                   @click="infoCarById(icone.id)"
-                  height="70vh"
-                  class="img-icon-car"
+                  height="50vh"
+                  class="img-icon-car my-n1"
                   :src="icone.icon"
                   :alt="icone.nome"
                 ></v-img>
@@ -95,34 +90,34 @@
         </v-card-title>
         <v-row>
           <v-col
-            lg="4"
-            xl="4"
-            col="4"
+            cols="4"
             v-for="(noticia, i) in noticias"
             :key="i"
+            class="border-0"
           >
             <v-card
-              elevation="0"
-              class="mx-auto bg-grey-lighten-4 h-100"
+              elevation="10"
+              rounded="0"
+              class="w-100 bg-grey-lighten-4 border-0"
               data-aos="fade-up"
               :data-aos-duration="`${1000 * noticia.id}`"
             >
               <v-img
-                class="align-end text-white"
-                height="55vh"
+                class="align-end text-white border-0"
+                height="38vh"
                 :src="noticia.foto"
                 cover
               >
               </v-img>
 
-              <v-card-title class="pt-4 mt-3 my-3 text--grey-darken-4">
+              <div class="pa-4 mt-3 my-3 text--grey-darken-4">
                 <router-link
                   :to="`/noticia/${noticia.id}`"
                   class="text--grey-darken-4 link-noticia"
                 >
                   {{ noticia.titulo }}
                 </router-link>
-              </v-card-title>
+              </div>
 
               <v-container class="noticia">
                 <v-card-subtitle>
@@ -144,7 +139,7 @@
                 <div class="mb-3 text-error mx-3">
                   <span>
                     <router-link class="text-red" :to="`/noticia/${noticia.id}`"
-                      >ver mais</router-link
+                      >ver mais  <v-icon class="ml-2">mdi-arrow-right</v-icon></router-link
                     >
                   </span>
                 </div>
@@ -297,22 +292,23 @@ onMounted(() => {
 
 .img-car-cover {
   max-width: 100%;
-  width: 60% !important;
+  width: 50% !important;
   object-fit: cover;
   object-position: center;
   margin: auto;
+  margin-top: -50px;
 }
 
 .acoes {
   width: 500px !important;
   margin: auto;
-  margin-top: -150px;
+  margin-top: -90px;
 }
 .acoes .img-icon-car {
   transition: 0.5s;
   background: transparent;
   max-width: 100%;
-  height: 350px !important;
+  height: 300px !important;
   object-fit: cover;
   object-position: center;
   margin: auto;
@@ -326,19 +322,22 @@ onMounted(() => {
   color: #000 !important;
   font-weight: bold !important;
   margin: auto;
-  margin-top: -120px;
   text-align: center;
+  margin-top: -300px;
 }
 .acoes .name-car h5 {
   font-weight: bold !important;
-  font-size: 22px;
+  font-size: 18px;
+  margin: auto;
+  margin-top: 200px;
 }
 
 .link-noticia {
   color: #000 !important;
   text-transform: capitalize;
-  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
   font-weight: bold;
+  font-size: 20px;
 }
 .data-noticia {
   font-size: 10px !important;
@@ -351,5 +350,8 @@ onMounted(() => {
 }
 .noticia {
   margin-top: -20px !important;
+}
+.traco:hover {
+  color: #f22 !important;
 }
 </style>
