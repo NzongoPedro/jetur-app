@@ -36,7 +36,7 @@
                 </h2>
                 <div>
                   <h5>{{ carro.slogan }}</h5>
-                  <p>
+                  <p class="t">
                     <router-link
                       :to="`/jetur/modelo/${carro.id}`"
                       class="text-black traco"
@@ -139,7 +139,8 @@
                 <div class="mb-3 text-error mx-3">
                   <span>
                     <router-link class="text-red" :to="`/noticia/${noticia.id}`"
-                      >ver mais  <v-icon class="ml-2">mdi-arrow-right</v-icon></router-link
+                      >ver mais
+                      <v-icon class="ml-2">mdi-arrow-right</v-icon></router-link
                     >
                   </span>
                 </div>
@@ -349,6 +350,11 @@ onMounted(() => {
   margin-top: -2px;
 }
 .noticia {
+  margin-top: -20px !important;
+}
+
+.t {
+  margin-left: -2px !important;
   margin-top: -20px !important;
 }
 .traco:hover {

@@ -4,7 +4,7 @@
       "id": 1,
       "nome": "jETOUR",
       "modelo": "X90 plus",
-      "logo_carro":"http://teste1.bcc.ao/gets/images/jetur/logos_carros/x90plus.png",
+      "logo_carro": "http://teste1.bcc.ao/gets/images/jetur/logos_carros/x90plus.png",
       "nome_catalogo": "X90_Plus_Impressão_A4_Papel_Couchê.pdf",
       "link_catalogo": "http://teste1.bcc.ao/gets/catalogos/X90_Plus_Impressão_A4_Papel_Couchê.pdf",
       "cor": "preta",
@@ -14,6 +14,7 @@
       "description": "ULTRA ESPAÇOSO, MOSTRANDO EXTREMO LUXO",
       "visao_geral": [
         {
+          "video": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/video.mp4",
           "foto_info": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Interior/electronic-gear-shifter.png",
           "capa": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Color/JETOUR_X90_zilong_white_013.png"
         }
@@ -82,12 +83,35 @@
           "desc2": "Potência máxima",
           "desc3": "Motor"
         }
+      ],
+      "galerias": [
+        {
+          "slides": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Galary/1.jpg"
+        },
+        {
+          "slides": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Galary/2.jpg"
+        },
+        {
+          "slides": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Galary/3.jpg"
+        },
+        {
+          "slides": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Galary/4.jpg"
+        },
+        {
+          "slides": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Galary/5.jpg"
+        },
+        {
+          "slides": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Galary/6.jpg"
+        },
+        {
+          "slides": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Galary/7.jpg"
+        }
       ]
     },
     {
       "id": 2,
       "nome": "JETOUR",
-      "logo_carro":"http://teste1.bcc.ao/gets/images/jetur/logos_carros/x70plus.png",
+      "logo_carro": "http://teste1.bcc.ao/gets/images/jetur/logos_carros/x70plus.png",
       "modelo": "X70 plus",
       "nome_catalogo": "X70_Plus_Impressão_A4_Papel_Couchê.pdf",
       "link_catalogo": "http://teste1.bcc.ao/gets/catalogos/X70_Plus_Impressão_A4_Papel_Couchê.pdf",
@@ -98,6 +122,7 @@
       "description": "UMA EXPRESSÃO DE ELEGÂNCIA",
       "visao_geral": [
         {
+          "video": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/video.mp4",
           "foto_info": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Interior/1.jpg",
           "capa": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Color/white.png"
         }
@@ -171,7 +196,7 @@
     },
     {
       "id": 3,
-      "logo_carro":"http://teste1.bcc.ao/gets/images/jetur/logos_carros/x70.png",
+      "logo_carro": "http://teste1.bcc.ao/gets/images/jetur/logos_carros/x70.png",
       "nome": "JETOUR",
       "modelo": "X70",
       "nome_catalogo": "X70_Impressão_A4_Papel_Couchê.pdf",
@@ -183,6 +208,7 @@
       "description": "O Melhor e Prático carro para família angola",
       "visao_geral": [
         {
+          "video": "http://teste1.bcc.ao/gets/images/jetur/X70/video.mp4",
           "foto_info": "http://teste1.bcc.ao/gets/images/jetur/X70/Interior/Cockpit Inteligente.jpg",
           "capa": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Color/JETOUR_X90_zilong_white_013.png"
         }

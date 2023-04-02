@@ -35,10 +35,13 @@
                 v-for="(logo, i) in dados_carro"
                 :src="logo.logo_carro"
                 :key="i"
+                class="mt-1"
               >
               </v-img>
             </div>
-
+            <v-spacer></v-spacer>
+            <v-spacer></v-spacer>
+            <v-spacer></v-spacer>
             <v-tab value="tab-1" color="error">
               <span class="text-white"> VISÃO GERAL</span>
             </v-tab>
@@ -53,6 +56,9 @@
             </v-tab>
             <v-tab value="tab-5" color="error">
               <span class="text-white">TECNOLOGIA</span>
+            </v-tab>
+            <v-tab value="tab-6" color="error">
+              <span class="text-white">GALERIA</span>
             </v-tab>
           </v-tabs>
         </v-container>
@@ -89,8 +95,97 @@
                         cor.nome
                       }}</v-tooltip>
                     </v-avatar>
-                    <div class="my-4 w-100">
-                      <v-img
+                  </div>
+                  <div>
+                    <br />
+                    <div
+                      class="my-6 mt-6 w-100"
+                      v-for="(info, i) in dados_carro[0].visao_geral"
+                      :key="i"
+                    >
+                      <video
+                        id="background-video"
+                        autoplay
+                        loop
+                        muted
+                        :poster="info.video"
+                      >
+                        <source :src="info.video" type="video/mp4" />
+                      </video>
+                      <div class="info-car">
+                        <!-- Video -->
+                        <v-row>
+                          <v-col
+                            v-for="(info, i) in dados_carro[0].info"
+                            :key="i"
+                          >
+                            <v-card class="bg-transparent" elevation="0">
+                              <v-card-title primary-title class="b">
+                                <div class="content-info">
+                                  <h3 class="headline mb-0">
+                                    {{ info.t1 }}
+                                  </h3>
+                                  <div>{{ info.desc1 }}</div>
+                                </div>
+                              </v-card-title>
+                              <v-divider
+                                :thickness="5"
+                                class="border-opacity-100"
+                                color="white"
+                                vertical
+                              ></v-divider>
+                            </v-card>
+                          </v-col>
+                          <v-col
+                            v-for="(info, i) in dados_carro[0].info"
+                            :key="i"
+                          >
+                            <v-card class="bg-transparent" elevation="0">
+                              <v-card-media src="src" height="200px">
+                              </v-card-media>
+                              <v-card-title primary-title class="b">
+                                <div class="content-info">
+                                  <h3 class="headline mb-0">
+                                    {{ info.t2 }}
+                                  </h3>
+                                  <div>{{ info.desc2 }}</div>
+                                </div>
+                              </v-card-title>
+                              <v-divider
+                                :thickness="5"
+                                class="border-opacity-100"
+                                color="white"
+                                vertical
+                              ></v-divider>
+                            </v-card>
+                          </v-col>
+                          <v-col
+                            v-for="(info, i) in dados_carro[0].info"
+                            :key="i"
+                          >
+                            <v-card class="bg-transparent" elevation="0">
+                              <v-card-media src="src" height="200px">
+                              </v-card-media>
+                              <v-card-title primary-title>
+                                <div class="content-info">
+                                  <h3 class="headline mb-0">
+                                    {{ info.t3 }}
+                                  </h3>
+                                  <div>{{ info.desc3 }}</div>
+                                </div>
+                              </v-card-title>
+                              <v-divider
+                                :thickness="5"
+                                class="border-opacity-100"
+                                color="white"
+                                vertical
+                              ></v-divider>
+                            </v-card>
+                          </v-col>
+                        </v-row>
+                      </div>
+                    </div>
+                    <!--     <v-img
                         cover
                         sizes="250"
                         width="100%"
@@ -174,8 +269,7 @@
                             </v-row>
                           </v-container>
                         </div>
-                      </v-img>
-                    </div>
+                      </v-img> -->
                   </div>
                   <br /><br />
                   <v-container grid-list-xs>
@@ -336,6 +430,29 @@
                       </v-col>
                     </v-row>
                   </v-container>
+                  <div class="galeria">
+                    <h1
+                      class="m-auto centered text-center mb-10 text-blue-grey-lighten-2 mt-14 my-14"
+                    >
+                      GALERIA
+                      <br />
+                    </h1>
+                    <v-carousel
+                      height="600"
+                      hide-delimiters
+                      show-arrows="hover"
+                      class="mb-0"
+                    >
+                      <v-carousel-item
+                        v-for="(item, i) in dados_carro[0].galerias"
+                        :key="i"
+                        :src="item.slides"
+                        cover
+                        width="100%"
+                      >
+                      </v-carousel-item>
+                    </v-carousel>
+                  </div>
                   <!-- Catalogo -->
                   <!--   <div class="center text-center centered mb-5">
                  <a :href=""></a>
@@ -518,6 +635,32 @@
                     </v-row>
                   </v-container>
                 </div>
+                <!-- GALERIA -->
+                <div v-else-if="num == 6">
+                  <div class="galeria">
+                    <h1
+                      class="m-auto centered text-center mb-10 text-blue-grey-lighten-2 mt-14 my-14"
+                    >
+                      GALERIA
+                      <br />
+                    </h1>
+                    <v-carousel
+                      height="600"
+                      hide-delimiters
+                      show-arrows="hover"
+                      class="mb-0"
+                    >
+                      <v-carousel-item
+                        v-for="(item, i) in dados_carro[0].galerias"
+                        :key="i"
+                        :src="item.slides"
+                        cover
+                        width="100%"
+                      >
+                      </v-carousel-item>
+                    </v-carousel>
+                  </div>
+                </div>
               </v-window-item>
             </div>
           </v-window>
@@ -533,6 +676,17 @@
         cover
       ></v-carousel-item>
     </v-carousel> -->
+
+    <div id="menu-flutuante" class="menu-flutuante">
+      <img
+        v-for="(icon, i) in menu_flutuante"
+        :key="i"
+        class="icons"
+        :src="icon.foto"
+        alt="alt"
+      />
+      <br />
+    </div>
   </div>
 </template>
 
@@ -580,6 +734,12 @@ export default {
       cor_carro: "",
       tab: null,
       atr: null,
+
+      menu_flutuante: [
+        { foto: "http://teste1.bcc.ao/gets/images/menu-flutuante/car_h.png" },
+        { foto: "http://teste1.bcc.ao/gets/images/menu-flutuante/call_h.png" },
+        { foto: "http://teste1.bcc.ao/gets/images/menu-flutuante/what_h.png" },
+      ],
     };
   },
 
@@ -587,11 +747,18 @@ export default {
     async infoCar() {
       if (this.$route.params.id) {
         this.idcar = this.$route.params.id;
-        await axios.get(`/api/database.json`).then((responsta) => {
-          this.dados_carro = responsta.data["automoveis"].filter(
-            (item) => item.id == this.idcar
-          );
-        });
+        await axios
+          .get(`/api/database.json`, {
+            headers: {
+              "Access-Control-Allow-Headers": "aplication/json",
+              "Access-Control-Allow-Origin": "*",
+            },
+          })
+          .then((responsta) => {
+            this.dados_carro = responsta.data["automoveis"].filter(
+              (item) => item.id == this.idcar
+            );
+          });
       }
       this.link_cor =
         this.dados_carro[0].cores[(this.idcar = this.$route.params.id - 1)];
@@ -600,11 +767,18 @@ export default {
     },
     async getColorCar(color) {
       this.idcar = this.$route.params.id;
-      await axios.get(`/api/database.json`).then((responsta) => {
-        this.dados_carro = responsta.data["automoveis"].filter(
-          (item) => item.id == this.idcar
-        );
-      });
+      await axios
+        .get(`/api/database.json`, {
+          headers: {
+            "Access-Control-Allow-Headers": "aplication/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+        })
+        .then((responsta) => {
+          this.dados_carro = responsta.data["automoveis"].filter(
+            (item) => item.id == this.idcar
+          );
+        });
       this.cor_carro = color;
       this.link_cor =
         this.dados_carro[0].cores[(this.idcar = this.$route.params.id - 1)];
@@ -624,7 +798,6 @@ export default {
 
   mounted() {
     document.title = "Modelo Jetur";
-
     this.infoCar();
   },
 };
@@ -685,9 +858,9 @@ onMounted(() => {
 }
 
 .info-car {
-  margin-top: 65vh;
-  background: none;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5) !important;
+  margin-bottom: 0 !important;
+  margin-top: -20%;
 }
 .content-info h3 {
   color: #fbfbfb;
@@ -699,7 +872,7 @@ onMounted(() => {
 .content-info div {
   color: #ddd;
   font-family: "Acto Medium";
-  margin-top: 4px;
+  margin: auto;
   font-weight: bold;
   font-size: 18px;
   text-align: left !important;
@@ -719,5 +892,31 @@ onMounted(() => {
 }
 img {
   border-radius: 0 !important;
+}
+
+/* VIDEO BACKGROUND *()*/
+
+#background-video {
+  width: 100% !important;
+  height: 70vh;
+  object-fit: cover;
+}
+
+#menu-flutuante.menu-flutuante {
+  position: fixed !important;
+  background: rgba(255, 255, 255, 0.3);
+  border: 5px solid #fff;
+  padding: 5px;
+  border-radius: 2px;
+  margin-top: 12vh;
+  top: 50px; /* ajuste essa altura de acordo com sua necessidade */
+  left: 90%; /* ajuste a posição horizontal de acordo com sua necessidade */
+}
+#menu-flutuante.menu-flutuante img {
+  max-width: 100%;
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin-top: 8px;
 }
 </style>
