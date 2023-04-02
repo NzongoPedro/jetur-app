@@ -1,11 +1,12 @@
 <template>
   <v-app>
-    <v-app-bar flat class="bg-primary">
+    <v-app-bar flat class="bg-primary pa-1">
       <v-container class="fill-height">
         <router-link to="/">
           <v-img
-            class="my-n8"
-            width="22vh"
+            class="logo ma-auto"
+            width="200px"
+            
             src="http://teste1.bcc.ao/gets/images/jetur/logo.png"
           >
           </v-img>
@@ -17,7 +18,7 @@
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
-        <div class="mt-n7">
+        <div class="mt-n5">
           <v-menu open-on-hover rounded="0">
             <template v-slot:activator="{ props }">
               <router-link
@@ -63,7 +64,7 @@
             rounded="0"
             prepend-icon="mdi-car"
             color="error"
-            class="mt-n8"
+            class="mt-n6"
           >
             TEST DRIVE
           </v-btn>
@@ -72,16 +73,6 @@
     </v-app-bar>
     <router-view></router-view>
     <the-footer></the-footer>
-    <div id="menu-flutuante" class="menu-flutuante">
-      <img
-        v-for="(icon, i) in menu_flutuante"
-        :key="i"
-        class="icons"
-        :src="icon.foto"
-        alt="alt"
-      />
-      <br />
-    </div>
   </v-app>
 </template>
 
@@ -110,14 +101,9 @@ export default {
       { title: "X90 PLUS", link: "/jetur/modelo/1" },
       { title: "X70 PLUS", link: "/jetur/modelo/2" },
       { title: "X70", link: "/jetur/modelo/3" },
-    /*   { title: "Catálogos", link: "/catalogos" }, */
+      /*   { title: "Catálogos", link: "/catalogos" }, */
     ],
 
-    menu_flutuante: [
-      { foto: "http://teste1.bcc.ao/gets/images/menu-flutuante/car_h.png" },
-      { foto: "http://teste1.bcc.ao/gets/images/menu-flutuante/call_h.png" },
-      { foto: "http://teste1.bcc.ao/gets/images/menu-flutuante/what_h.png" },
-    ],
   }),
 
   methods: {
@@ -160,25 +146,13 @@ export default {
 }
 .links-nav:hover {
   background: none !important;
-  border-bottom: 2px solid #f22 !important;
+  text-decoration: underline !important;
+  color: #f22 !important;
   transition: 0.5s;
 }
 
-#menu-flutuante.menu-flutuante {
-  position: fixed !important;
-  background: rgba(255, 255, 255, 0.3);
-  border: 5px solid #fff;
-  padding: 5px;
-  border-radius: 50px;
-  margin-top: 12vh;
-  top: 50px; /* ajuste essa altura de acordo com sua necessidade */
-  left: 95%; /* ajuste a posição horizontal de acordo com sua necessidade */
+.logo{
+  margin-top: -20px !important;
 }
-#menu-flutuante.menu-flutuante img {
-  max-width: 100%;
-  width: 40px;
-  height: 40px;
-  display: block;
-  margin-top: 8px;
-}
+
 </style>

@@ -23,9 +23,9 @@
                   >{{ item.nome }}</router-link
                 >
               </v-card-text>
-              <v-card-text class="my-6">
+              <v-card-text class="my-6 bg-none bg-transparent">
                 <v-card-title>
-                  <h5 class="text-white text-uppercase">
+                  <h5 class="text-white ml-n4 text-uppercase">
                     Mais informações
                   </h5>
                 </v-card-title>
@@ -36,8 +36,10 @@
                 <br />
                 <span class="text-white text-footer">
                   <v-icon class="mr-3 icon-footer">mdi-email</v-icon>
-                  administrativo@jeturangola.com
-                  <span class="ml-11 my-15 mt-n16 p-0 i">markting@jetur.com</span>
+                  administrativo@jetourangola.com
+                  <span class="ml-9 my-15 mt-n16 p-0 i"
+                    >marketing@jetourangola.com</span
+                  >
                   <br />
                 </span>
               </v-card-text>
@@ -84,7 +86,7 @@
                 >
               </v-card-text>
               <br />
-              <v-card-text>
+              <v-card-text class="ml-n4">
                 <v-card-title class="my-0">
                   <h5 class="text-white my-15">LUBANGO</h5>
                 </v-card-title>
@@ -168,8 +170,7 @@ export default {
   font-family: "Nunito" !important;
 }
 
-
-.i{
+.i {
   margin-top: -20px !important;
 }
 </style>
