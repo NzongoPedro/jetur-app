@@ -1,11 +1,12 @@
 <template>
   <div>
+    <br>
     <v-carousel
       cycle
       height="700"
       hide-delimiters
       show-arrows="hover"
-      class="mb-0"
+      class="mb-0 mt-11 my-16"
     >
       <v-carousel-item
         v-for="(item, i) in items"
@@ -168,17 +169,17 @@ export default {
       noticias: "",
       items: [
         {
-          src: "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/KV_pics/1.jpg",
+          src: "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/KV_pics/1.png",
           title: "X90 Plus",
           description: "ULTRA ESPAÇOSO, MOSTRANDO EXTREMO LUXO",
         },
         {
-          src: "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/KV_pics/2.jpg",
+          src: "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/KV_pics/2.png",
           title: "X70 Plus",
           description: "UMA EXPRESSÃO DE ELEGÂNCIA",
         },
         {
-          src: "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/KV_pics/3.jpg",
+          src: "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/KV_pics/3.png",
           title: "X70",
           description: "O Melhor e Prático carro para família angola   ",
         },

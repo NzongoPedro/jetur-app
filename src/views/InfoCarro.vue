@@ -112,9 +112,10 @@
                       >
                         <source :src="info.video" type="video/mp4" />
                       </video>
-                      <div class="info-car">
+
+                      <div>
                         <!-- Video -->
-                        <v-row>
+                        <v-row class="bg-red pa-5 info-car">
                           <v-col
                             v-for="(info, i) in dados_carro[0].info"
                             :key="i"
@@ -194,6 +195,7 @@
                         :key="i"
                         :src="info.foto_info"
                       >
+    
                         <div class="info-car">
                           <v-container grid-list-xs>
                             <v-row>
@@ -299,16 +301,19 @@
                           </v-card-text>
                         </v-card>
                       </v-col>
-                      <v-col
-                        cols="6"
-                        v-for="(desepenho, i) in dados_carro[0].desepenho"
-                        :key="i"
-                      >
-                        <v-card elevation="0">
-                          <v-img
-                            :src="desepenho.foto_depenho"
-                            max-height="100%"
-                          ></v-img>
+                      <v-col cols="6">
+                        <v-card>
+                          <v-carousel show-arrows="hover">
+                            <v-carousel-item
+                              rounded="0"
+                              v-for="(desepenho, i) in dados_carro[0]
+                                .desepenho[0].fotos"
+                              :key="i"
+                              :src="desepenho.slide"
+                             class="rounded-0"
+                              cover
+                            ></v-carousel-item>
+                          </v-carousel>
                         </v-card>
                       </v-col>
                     </v-row>
@@ -321,13 +326,19 @@
                       <br /><br /><br /><br /><br />
                     </h1>
                     <v-row>
-                      <v-col
-                        cols="6"
-                        v-for="(exterior, i) in dados_carro[0].exterior"
-                        :key="i"
-                      >
+                      <v-col cols="6">
                         <v-card>
-                          <v-img :src="exterior.foto" max-height="100%"></v-img>
+                          <v-carousel show-arrows="hover">
+                            <v-carousel-item
+                              rounded="0"
+                              v-for="(exterior, i) in dados_carro[0].exterior[0]
+                                .fotos"
+                              :key="i"
+                              :src="exterior.slide"
+                             class="rounded-0"
+                              cover
+                            ></v-carousel-item>
+                          </v-carousel>
                         </v-card>
                       </v-col>
                       <v-col
@@ -378,13 +389,19 @@
                           </v-card-text>
                         </v-card>
                       </v-col>
-                      <v-col
-                        cols="6"
-                        v-for="(interior, i) in dados_carro[0].interior"
-                        :key="i"
-                      >
+                      <v-col cols="6">
                         <v-card>
-                          <v-img :src="interior.foto" max-height="100%"></v-img>
+                          <v-carousel show-arrows="hover">
+                            <v-carousel-item
+                              rounded="0"
+                              v-for="(interior, i) in dados_carro[0].interior[0]
+                                .fotos"
+                              :key="i"
+                              :src="interior.slide"
+                             class="rounded-0"
+                              cover
+                            ></v-carousel-item>
+                          </v-carousel>
                         </v-card>
                       </v-col>
                     </v-row>
@@ -397,16 +414,19 @@
                       <br /><br /><br /><br /><br />
                     </h1>
                     <v-row>
-                      <v-col
-                        cols="6"
-                        v-for="(tecnologia, i) in dados_carro[0].tecnologia"
-                        :key="i"
-                      >
+                      <v-col cols="6">
                         <v-card>
-                          <v-img
-                            :src="tecnologia.foto"
-                            max-height="100%"
-                          ></v-img>
+                          <v-carousel show-arrows="hover">
+                            <v-carousel-item
+                              rounded="0"
+                              v-for="(tecnologia, i) in dados_carro[0]
+                                .tecnologia[0].fotos"
+                              :key="i"
+                              :src="tecnologia.slide"
+                             class="rounded-0"
+                              cover
+                            ></v-carousel-item>
+                          </v-carousel>
                         </v-card>
                       </v-col>
                       <v-col
@@ -444,6 +464,7 @@
                       class="mb-0"
                     >
                       <v-carousel-item
+                        rounded="0"
                         v-for="(item, i) in dados_carro[0].galerias"
                         :key="i"
                         :src="item.slides"
@@ -453,17 +474,6 @@
                       </v-carousel-item>
                     </v-carousel>
                   </div>
-                  <!-- Catalogo -->
-                  <!--   <div class="center text-center centered mb-5">
-                 <a :href=""></a>
-                  <v-btn
-                    variant="flat"
-                    color="error"
-                    prepend-icon="mdi-file-pdf-box"
-                  >
-                    BAIXAR CATALÓGO
-                  </v-btn>
-                </div> -->
                 </div>
                 <!-- Desempenho -->
                 <div v-else-if="num == 2">
@@ -494,16 +504,19 @@
                           </v-card-text>
                         </v-card>
                       </v-col>
-                      <v-col
-                        cols="6"
-                        v-for="(desepenho, i) in dados_carro[0].desepenho"
-                        :key="i"
-                      >
+                      <v-col cols="6">
                         <v-card>
-                          <v-img
-                            :src="desepenho.foto_depenho"
-                            max-height="100%"
-                          ></v-img>
+                          <v-carousel show-arrows="hover">
+                            <v-carousel-item
+                              rounded="0"
+                              v-for="(desepenho, i) in dados_carro[0]
+                                .desepenho[0].fotos"
+                              :key="i"
+                              :src="desepenho.slide"
+                             class="rounded-0"
+                              cover
+                            ></v-carousel-item>
+                          </v-carousel>
                         </v-card>
                       </v-col>
                     </v-row>
@@ -519,13 +532,19 @@
                       <br /><br /><br /><br /><br />
                     </h1>
                     <v-row>
-                      <v-col
-                        cols="6"
-                        v-for="(exterior, i) in dados_carro[0].exterior"
-                        :key="i"
-                      >
+                      <v-col cols="6">
                         <v-card>
-                          <v-img :src="exterior.foto" max-height="100%"></v-img>
+                          <v-carousel show-arrows="hover">
+                            <v-carousel-item
+                              rounded="0"
+                              v-for="(exterior, i) in dados_carro[0].exterior[0]
+                                .fotos"
+                              :key="i"
+                              :src="exterior.slide"
+                             class="rounded-0"
+                              cover
+                            ></v-carousel-item>
+                          </v-carousel>
                         </v-card>
                       </v-col>
                       <v-col
@@ -579,13 +598,19 @@
                           </v-card-text>
                         </v-card>
                       </v-col>
-                      <v-col
-                        cols="6"
-                        v-for="(interior, i) in dados_carro[0].interior"
-                        :key="i"
-                      >
+                      <v-col cols="6">
                         <v-card>
-                          <v-img :src="interior.foto" max-height="100%"></v-img>
+                          <v-carousel show-arrows="hover">
+                            <v-carousel-item
+                              rounded="0"
+                              v-for="(interior, i) in dados_carro[0].interior[0]
+                                .fotos"
+                              :key="i"
+                              :src="interior.slide"
+                             class="rounded-0"
+                              cover
+                            ></v-carousel-item>
+                          </v-carousel>
                         </v-card>
                       </v-col>
                     </v-row>
@@ -601,16 +626,19 @@
                       <br /><br /><br /><br /><br />
                     </h1>
                     <v-row>
-                      <v-col
-                        cols="6"
-                        v-for="(tecnologia, i) in dados_carro[0].tecnologia"
-                        :key="i"
-                      >
+                      <v-col cols="6">
                         <v-card>
-                          <v-img
-                            :src="tecnologia.foto"
-                            max-height="100%"
-                          ></v-img>
+                          <v-carousel show-arrows="hover">
+                            <v-carousel-item
+                              rounded="0"
+                              v-for="(tecnologia, i) in dados_carro[0]
+                                .tecnologia[0].fotos"
+                              :key="i"
+                              :src="tecnologia.slide"
+                             class="rounded-0"
+                              cover
+                            ></v-carousel-item>
+                          </v-carousel>
                         </v-card>
                       </v-col>
                       <v-col
@@ -651,6 +679,7 @@
                       class="mb-0"
                     >
                       <v-carousel-item
+                        rounded="0"
                         v-for="(item, i) in dados_carro[0].galerias"
                         :key="i"
                         :src="item.slides"
@@ -662,20 +691,28 @@
                   </div>
                 </div>
               </v-window-item>
+              <div class="center text-center centered mb-5 my-5 w-100">
+                <a
+                  :href="detalhe.link_catalogo"
+                  :download="detalhe.nome_catalogo"
+                >
+                  <v-btn
+                    variant="flat"
+                    color="error"
+                    prepend-icon="mdi-file-pdf-box"
+                    block
+                    rounded="0"
+                    size="x-large"
+                  >
+                    BAIXAR CATALÓGO
+                  </v-btn>
+                </a>
+              </div>
             </div>
           </v-window>
         </div>
       </v-card-text>
     </v-card>
-    <!-- Galeria -->
-    <!--   <v-carousel hide-delimiters>
-      <v-carousel-item
-        v-for="(slide, i) in dados_carro"
-        :key="i"
-        :src="item.src"
-        cover
-      ></v-carousel-item>
-    </v-carousel> -->
 
     <div id="menu-flutuante" class="menu-flutuante">
       <img
@@ -683,9 +720,10 @@
         :key="i"
         class="icons"
         :src="icon.foto"
-        alt="alt"
+        alt="
+        alt"
       />
-      <br />
+      <br /><br />
     </div>
   </div>
 </template>
@@ -854,13 +892,22 @@ onMounted(() => {
 }
 .titulo {
   margin-top: 2vh;
-  font-size: 30px !important;
+  font-size: 40px !important;
+  display: inline-block;
+  line-height: 50px !important;
+}
+
+.f {
+  background: #000 !important;
+  z-index: 99999 !important ;
+  margin-top: -12%;
 }
 
 .info-car {
-  background: rgba(0, 0, 0, 0.5) !important;
-  margin-bottom: 0 !important;
-  margin-top: -20%;
+  z-index: 99999 !important;
+  position: inherit;
+  background: rgba(0, 0, 0, 0.1) !important;
+  margin-top: -10.5% !important ;
 }
 .content-info h3 {
   color: #fbfbfb;
@@ -898,17 +945,20 @@ img {
 
 #background-video {
   width: 100% !important;
-  height: 70vh;
+  height: 50vh;
   object-fit: cover;
+  z-index: -1 !important;
+  position: relative;
 }
 
 #menu-flutuante.menu-flutuante {
   position: fixed !important;
+  height: 21vh;
   background: rgba(255, 255, 255, 0.3);
   border: 5px solid #fff;
   padding: 5px;
-  border-radius: 2px;
-  margin-top: 12vh;
+  border-radius: 20px;
+  margin-top: 10vh;
   top: 50px; /* ajuste essa altura de acordo com sua necessidade */
   left: 90%; /* ajuste a posição horizontal de acordo com sua necessidade */
 }
