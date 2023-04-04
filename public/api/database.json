@@ -10,7 +10,7 @@
       "cor": "preta",
       "slogan": "aproveite a vida e sua viagem",
       "capa": "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/X90/capa.png",
-      "capa_2": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/KV.png",
+      "capa_2": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/KV.jpg",
       "description": "ULTRA ESPAÇOSO, MOSTRANDO EXTREMO LUXO",
       "visao_geral": [
         {
@@ -50,28 +50,72 @@
         {
           "titulo": "Motor 2.0 T+7DCT",
           "foto_depenho": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/desepenho/1.jpg",
-          "descricao": "O X90 PLUS está equipado com um motor potente de 2.0T, combinado com uma transmissão de 7 dupla embreagem molhada, que pode produzir 254HP, a aceleração de 100 km é inferior a 8 segundos. Pode lidar com várias condições de estrada e trazer-lhe o máximo prazer de condução e experiência."
+          "descricao": "O X90 PLUS está equipado com um motor potente de 2.0T, combinado com uma transmissão de 7 dupla embreagem molhada, que pode produzir 254HP, a aceleração de 100 km é inferior a 8 segundos. Pode lidar com várias condições de estrada e trazer-lhe o máximo prazer de condução e experiência.",
+         "fotos": [
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/desepenho/1.jpg"
+            }
+          ]
         }
       ],
       "exterior": [
         {
           "titulo": "Excelente imagem",
           "conteudo": "Excelente formato hexagonal de ar prestígio, grade cromada quadrada calma e equipada com um conjunto de faróis de LED Matrix, o design geral é moderno e elegante.",
-          "foto": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Exterior/2.png"
+          "fotos": [
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Exterior/1.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Exterior/2.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Exterior/3.jpg"
+            }
+          ]
         }
       ],
       "interior": [
         {
           "titulo": "Interior de luxo, cabine tranquila",
           "conteudo": "O layout geral é simples e elegante, com espaço para modelos MPV. Configuração luxuosa e adoção de tecnologias de pacote acústico silencioso NVH 24, desfrute de um cockpit silencioso de 36db",
-          "foto": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Interior/electronic-gear-shifter.png"
+          "fotos": [
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Interior/1.png"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Interior/2.png"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Interior/3.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Interior/4.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Interior/5.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Interior/6.jpg"
+            }
+          ]
         }
       ],
       "tecnologia": [
         {
           "titulo": "Estacionamento Panorâmico 360°",
           "conteudo": "A câmera panorâmica 360° auxilia o motorista com uma visão panorâmica e o Parking Assist, bem como ao estacionar e manobrar. A câmera torna visível a área imediatamente ao redor do veículo, tanto do ponto de vista aéreo quanto abaixo da linha da janela.",
-          "foto": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Technology/360 degree panoramic parking.png"
+          "fotos": [
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Technology/1.png"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Technology/2.png"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Technology/3.png"
+            }
+          ]
         }
       ],
       "info": [
@@ -108,6 +152,7 @@
         }
       ]
     },
+
     {
       "id": 2,
       "nome": "JETOUR",
@@ -192,8 +237,17 @@
           "desc2": "Potência máxima",
           "desc3": "Motor"
         }
+      ],
+      "galerias": [
+        {
+          "slides": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Gallary/1.png"
+        },
+        {
+          "slides": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Gallary/2.png"
+        }
       ]
     },
+
     {
       "id": 3,
       "logo_carro": "http://teste1.bcc.ao/gets/images/jetur/logos_carros/x70.png",
@@ -266,6 +320,29 @@
           "desc1": "Distância entre os eixos",
           "desc2": "Potência máxima",
           "desc3": "Motor"
+        }
+      ],
+      "galerias": [
+        {
+          "slides": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Galary/1.jpg"
+        },
+        {
+          "slides": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Galary/2.jpg"
+        },
+        {
+          "slides": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Galary/3.jpg"
+        },
+        {
+          "slides": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Galary/4.jpg"
+        },
+        {
+          "slides": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Galary/5.jpg"
+        },
+        {
+          "slides": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Galary/6.jpg"
+        },
+        {
+          "slides": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Galary/7.jpg"
         }
       ]
     }

@@ -7,29 +7,35 @@
         <h1>Notícias</h1>
       </v-card-title>
       <v-row>
-        <v-col lg="4" xl="4" col="4" v-for="(noticia, i) in noticias" :key="i">
+        <v-col
+          cols="4"
+          v-for="(noticia, i) in noticias"
+          :key="i"
+          class="border-0"
+        >
           <v-card
-            elevation="0"
-            class="mx-auto bg-grey-lighten-4"
+            elevation="10"
+            rounded="0"
+            class="w-100 bg-grey-lighten-4 border-0"
             data-aos="fade-up"
             :data-aos-duration="`${1000 * noticia.id}`"
           >
             <v-img
-              class="align-end text-white"
-              height="100%"
+              class="align-end text-white border-0"
+              height="38vh"
               :src="noticia.foto"
               cover
             >
             </v-img>
 
-            <v-card-title class="pt-4 mt-3 my-3 text--grey-darken-4">
+            <div class="pa-4 mt-3 my-3 text--grey-darken-4">
               <router-link
                 :to="`/noticia/${noticia.id}`"
                 class="text--grey-darken-4 link-noticia"
               >
                 {{ noticia.titulo }}
               </router-link>
-            </v-card-title>
+            </div>
 
             <v-container class="noticia">
               <v-card-subtitle>
@@ -51,7 +57,8 @@
               <div class="mb-3 text-error mx-3">
                 <span>
                   <router-link class="text-red" :to="`/noticia/${noticia.id}`"
-                    >ver mais</router-link
+                    >ver mais
+                    <v-icon class="ml-2">mdi-arrow-right</v-icon></router-link
                   >
                 </span>
               </div>
@@ -98,8 +105,9 @@ onMounted(() => {
 .link-noticia {
   color: #000 !important;
   text-transform: capitalize;
-  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
   font-weight: bold;
+  font-size: 20px;
 }
 .data-noticia {
   font-size: 10px !important;
