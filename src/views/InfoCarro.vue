@@ -115,7 +115,7 @@
 
                       <div>
                         <!-- Video -->
-                        <v-row class="bg-red pa-5 info-car">
+                        <v-row class="pa-5 info-car">
                           <v-col
                             v-for="(info, i) in dados_carro[0].info"
                             :key="i"
@@ -310,7 +310,7 @@
                                 .desepenho[0].fotos"
                               :key="i"
                               :src="desepenho.slide"
-                             class="rounded-0"
+                              class="rounded-0"
                               cover
                             ></v-carousel-item>
                           </v-carousel>
@@ -335,7 +335,7 @@
                                 .fotos"
                               :key="i"
                               :src="exterior.slide"
-                             class="rounded-0"
+                              class="rounded-0"
                               cover
                             ></v-carousel-item>
                           </v-carousel>
@@ -398,7 +398,7 @@
                                 .fotos"
                               :key="i"
                               :src="interior.slide"
-                             class="rounded-0"
+                              class="rounded-0"
                               cover
                             ></v-carousel-item>
                           </v-carousel>
@@ -423,7 +423,7 @@
                                 .tecnologia[0].fotos"
                               :key="i"
                               :src="tecnologia.slide"
-                             class="rounded-0"
+                              class="rounded-0"
                               cover
                             ></v-carousel-item>
                           </v-carousel>
@@ -513,7 +513,7 @@
                                 .desepenho[0].fotos"
                               :key="i"
                               :src="desepenho.slide"
-                             class="rounded-0"
+                              class="rounded-0"
                               cover
                             ></v-carousel-item>
                           </v-carousel>
@@ -541,7 +541,7 @@
                                 .fotos"
                               :key="i"
                               :src="exterior.slide"
-                             class="rounded-0"
+                              class="rounded-0"
                               cover
                             ></v-carousel-item>
                           </v-carousel>
@@ -607,7 +607,7 @@
                                 .fotos"
                               :key="i"
                               :src="interior.slide"
-                             class="rounded-0"
+                              class="rounded-0"
                               cover
                             ></v-carousel-item>
                           </v-carousel>
@@ -635,7 +635,7 @@
                                 .tecnologia[0].fotos"
                               :key="i"
                               :src="tecnologia.slide"
-                             class="rounded-0"
+                              class="rounded-0"
                               cover
                             ></v-carousel-item>
                           </v-carousel>
@@ -715,15 +715,15 @@
     </v-card>
 
     <div id="menu-flutuante" class="menu-flutuante">
-      <img
-        v-for="(icon, i) in menu_flutuante"
+      <v-avatar
+        size="50"
+        color="black"
+        v-for="(icones, i) in menu_flutuante"
         :key="i"
-        class="icons"
-        :src="icon.foto"
-        alt="
-        alt"
-      />
-      <br /><br />
+        class="mb-2 avatar-icon"
+      >
+        <v-icon>{{ icones.foto }}</v-icon>
+      </v-avatar>
     </div>
   </div>
 </template>
@@ -774,9 +774,9 @@ export default {
       atr: null,
 
       menu_flutuante: [
-        { foto: "http://teste1.bcc.ao/gets/images/menu-flutuante/car_h.png" },
-        { foto: "http://teste1.bcc.ao/gets/images/menu-flutuante/call_h.png" },
-        { foto: "http://teste1.bcc.ao/gets/images/menu-flutuante/what_h.png" },
+        { foto: "mdi-car" },
+        { foto: "mdi-account-tie-voice-outline" },
+        { foto: "mdi-whatsapp" },
       ],
     };
   },
@@ -845,6 +845,9 @@ onMounted(() => {
 </script>
 
 <style scoped>
+img {
+  border-radius: 0 !important;
+}
 .slide {
   top: 0;
   left: 0;
@@ -906,8 +909,14 @@ onMounted(() => {
 .info-car {
   z-index: 99999 !important;
   position: inherit;
-  background: rgba(0, 0, 0, 0.1) !important;
+  background: rgba(0, 0, 0, 0.7) !important;
   margin-top: -10.5% !important ;
+  display: column;
+  justify-content: center;
+  align-content: center;
+}
+.content-info {
+  margin-left: 30%;
 }
 .content-info h3 {
   color: #fbfbfb;
@@ -917,7 +926,7 @@ onMounted(() => {
   font-weight: bold;
 }
 .content-info div {
-  color: #ddd;
+  color: #fff;
   font-family: "Acto Medium";
   margin: auto;
   font-weight: bold;
@@ -929,7 +938,7 @@ onMounted(() => {
   border: none !important;
 }
 .b {
-  border-right: 2px solid #fbfbfb;
+  border-right: 4px solid gray;
 }
 .carro-capa {
   margin-bottom: 2vh;
@@ -945,7 +954,7 @@ img {
 
 #background-video {
   width: 100% !important;
-  height: 50vh;
+  height: 85vh;
   object-fit: cover;
   z-index: -1 !important;
   position: relative;
@@ -953,12 +962,12 @@ img {
 
 #menu-flutuante.menu-flutuante {
   position: fixed !important;
-  height: 21vh;
   background: rgba(255, 255, 255, 0.3);
   border: 5px solid #fff;
-  padding: 5px;
+  padding: 4px;
   border-radius: 20px;
   margin-top: 10vh;
+  width: 4%;
   top: 50px; /* ajuste essa altura de acordo com sua necessidade */
   left: 90%; /* ajuste a posição horizontal de acordo com sua necessidade */
 }
@@ -968,5 +977,11 @@ img {
   height: 40px;
   display: block;
   margin-top: 8px;
+}
+
+.avatar-icon:hover {
+  border: 2px solid #f22;
+  color: #f22 !important;
+  transition: 0.5s;
 }
 </style>
