@@ -51,7 +51,7 @@
           "titulo": "Motor 2.0 T+7DCT",
           "foto_depenho": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/desepenho/1.jpg",
           "descricao": "O X90 PLUS está equipado com um motor potente de 2.0T, combinado com uma transmissão de 7 dupla embreagem molhada, que pode produzir 254HP, a aceleração de 100 km é inferior a 8 segundos. Pode lidar com várias condições de estrada e trazer-lhe o máximo prazer de condução e experiência.",
-         "fotos": [
+          "fotos": [
             {
               "slide": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/desepenho/1.jpg"
             }
@@ -163,7 +163,7 @@
       "cor": "azul",
       "slogan": "aproveite a vida e sua viagem",
       "capa": "http://teste1.bcc.ao/gets/images/jetur/pagina_inicial/X70Plus/PNG-2.png",
-      "capa_2": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/KV.png",
+      "capa_2": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/KV.jpg",
       "description": "UMA EXPRESSÃO DE ELEGÂNCIA",
       "visao_geral": [
         {
@@ -204,28 +204,74 @@
         {
           "titulo": "Motor Potente",
           "descricao": "Um motor 1.6L turboalimentado, com 197 cavalos acoplado a uma transmissão de dupla embreagem de 7 velocidades, resultando em uma experiência de direção suave e eficiente.",
-          "foto_depenho": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Performance/1.jpg"
+          "fotos": [
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Performance/1.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Performance/2.png"
+            }
+          ]
         }
       ],
       "exterior": [
         {
           "titulo": "Exterior Elegante",
           "conteudo": "Lorem impsum dolor sit amet Lorem impsum dolor sit amet Lorem impsum dolor sit amet",
-          "foto": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Exterior/3.png"
+          "fotos": [
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Exterior/1.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Exterior/2.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Exterior/3.jpg"
+            }
+          ]
         }
       ],
       "interior": [
         {
           "titulo": "Tecnologia Avançada",
           "conteudo": "O Jetour X70 Plus Top está equipado com um avançado sistema de entretenimento compatível com smartphones de última geração. Um painel touchscreen que controla o sistema de ar condicionado. Um cockpit digital que oferece sistemas inteligentes para uma experiência de condução mais segura, inteligente e rica.",
-          "foto": "http:/este1.bcc.ao/gets/images/jetur/X70Plus/Interior/4.jpg"
+          "fotos": [
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Interior/1.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Interior/3.png"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Interior/4.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X90Plus/Interior/5.jpg"
+            }
+          ]
         }
       ],
       "tecnologia": [
         {
           "titulo": "Tech Tech",
           "conteudo": "Lorem impsum dolor sit amet Lorem impsum dolor sit amet Lorem impsum dolor sit amet Lorem impsum dolor sit amet",
-          "foto": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Tech/LDWS.png"
+          "fotos": [
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Tech/1.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Tech/2.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Tech/3.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Tech/4.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Tech/5.jpg"
+            }
+          ]
         }
       ],
       "info": [
@@ -288,28 +334,74 @@
         {
           "titulo": "Motor Turboalimentado",
           "descricao": "O Jetour X70 Intermedio vem com um motor turbo 1.5T emparelhado com uma transmissão automática de 8 velocidades que gera 156 HP e se destaca no consumo reduzido de combustível, suficiente para uma ultrapassagem rápida.",
-          "foto_depenho": "http://teste1.bcc.ao/gets/images/jetur/X70/Performance/TJX70J-(40).png"
+          "fotos": [
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70/Performance/1.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70/Performance/2.png"
+            }
+          ]
         }
       ],
       "exterior": [
         {
           "titulo": "Modelagem esportiva altamente reconhecível",
           "conteudo": "X70 intermedio possui maior espaçamento de grade para que sua identificação seja alta e represente uma classe alta. A lâmpada de guia de luz de alta luminância em comparação com a lâmpada halógena tradicional, tem as vantagens de longa vida útil e mais ecologicamente correta.",
-          "foto": "http://teste1.bcc.ao/gets/images/jetur/X70/Exterior/1.jpg"
+          "fotos": [
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70/Exterior/1.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70/Exterior/2.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70/Exterior/3.jpg"
+            }
+          ]
         }
       ],
       "interior": [
         {
           "titulo": "Interiores com estilo esportivo",
           "conteudo": "Desde o impressionante volante tipo D e pedais de metal polido até o botão para multimídia, o Jetour X70 intermedia tem um design interior esportivo que o envolve em um ambiente tecnológico apoiado por qualidade de classe mundial.",
-          "foto": "http://teste1.bcc.ao/gets/images/jetur/X70/Interior/Interiores-desportivos-e-elegantes.jpg"
+          "fotos": [
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70/Interior/1.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70/Interior/2.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70/Interior/3.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70/Interior/4.png"
+            }
+          ]
         }
       ],
       "tecnologia": [
         {
           "titulo": "Alto fator de segurança EPB+AUTOHOLD",
           "conteudo": "função AUTOHOLD inteligente permite que a roda traseira seja freada automaticamente quando o veículo está parado em um sinal vermelho ou estacionado em uma subida ou descida. O motorista não terá que pisar no freio o tempo todo para manter o carro parado, mesmo que a transmissão automática esteja no modo D. A função Auto Hold será ativada assim que o botão “AUTHOLD” for pressionado, e uma pisada suave no acelerador liberará o freio. Este recurso inteligente dissipa completamente a preocupação de escorregar no início da subida",
-          "foto": "http://teste1.bcc.ao/gets/images/jetur/X70/Tech/1jpg"
+           "fotos": [
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Tech/1.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Tech/2.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Tech/3.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Tech/4.jpg"
+            },
+            {
+              "slide": "http://teste1.bcc.ao/gets/images/jetur/X70Plus/Tech/5.jpg"
+            }
+          ]
         }
       ],
       "info": [
